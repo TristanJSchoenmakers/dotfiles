@@ -5,16 +5,16 @@ Installs all the software and packages I need on my fresh install.
 
 ## Getting started
 
-#### Download the script & place it in the home directory
+#### Step 1 - Download the script & place it in the home directory
 
-#### Update the permissions of the script
+#### Step 2 - Update the permissions of the script
 Open up a terminal window on Ubuntu by pressing *Ctrl + Alt + T* or *Ctrl + Shift + T* on the keyboard.
 Then, update the permissions of the script with the chmod command.
 ``` bash
 sudo chmod +x ~/ubuntu-post-installer.sh
 ```
 
-#### Run the script
+#### Step 3 - Run the script
 ``` bash
 sudo bash ubuntu-post-installer.sh   
 ```
