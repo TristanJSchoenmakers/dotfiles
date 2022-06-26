@@ -1,2 +1,2 @@
-# personal-Ubuntu-post-installation-script
-My personal post-installation script for Ubuntu
+My personal post-installation script for Ubuntu.
+Installs all the software and packages I need on my fresh install.
