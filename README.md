@@ -20,4 +20,5 @@ sudo bash ubuntu-post-installer.sh
 ```
 
 ## Sources
-- https://www.addictivetips.com/ubuntu-linux-tips/make-ubuntu-post-installation-script/
+- [Make a post installation script](https://www.addictivetips.com/ubuntu-linux-tips/make-ubuntu-post-installation-script/)
+- [Remove default folders](https://weibeld.net/linux/remove-default-folders.html)
