@@ -1,6 +1,4 @@
-**!!Under construction!!**
-
-My personal post-installation script for Ubuntu.
+My personal post-installation script for EndeavourOS.
 Installs all the software and packages I need on my fresh install.
 
 ## Getting started
@@ -11,12 +9,12 @@ Installs all the software and packages I need on my fresh install.
 Open up a terminal window on Ubuntu by pressing *Ctrl + Alt + T* or *Ctrl + Shift + T* on the keyboard.
 Then, update the permissions of the script with the chmod command.
 ``` bash
-sudo chmod +x ~/ubuntu-post-installer.sh
+sudo chmod +x ~/install.sh
 ```
 
 #### Step 3 - Run the script
 ``` bash
-sudo bash ubuntu-post-installer.sh   
+sudo bash install.sh   
 ```
 
 ## Sources
