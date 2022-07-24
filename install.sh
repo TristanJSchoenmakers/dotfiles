@@ -30,16 +30,22 @@ sudo pacman -S discord
 #######################################
 # 2 - Installation & Configuration terminal emulator
 #######################################
+sudo pacman -S starship
+sudo pacman -S ttf-joypixels
+echo "eval \"\$(starship init bash)\"" >> ~/.bashrc
+echo "# Get editor completions based on the config schema
+\"\$schema\" = 'https://starship.rs/config-schema.json'
 
-# ZSH https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
-sudo pacman -S zsh
-#sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-#git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-#git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
-#git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-#sudo dnf install fd-find
-#chsh -s $(which zsh)
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Also show dotnet when there is a solution file in the directory
+[dotnet]
+detect_extensions = [\"csproj\", \"sln\"]
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true" > ~/.config/starship.toml
 
 # Docker-Desktop
 # Download link: https://docs.docker.com/desktop/release-notes/
