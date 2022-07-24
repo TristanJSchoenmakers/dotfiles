@@ -1,7 +1,6 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 sudo pacman -Syu
-yaourt -Syua
 
 # Tools install
   # System tools
