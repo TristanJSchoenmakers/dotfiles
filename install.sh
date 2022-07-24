@@ -26,9 +26,10 @@ sudo pacman -S neovim
 
 # Personal tools
 sudo pacman -S discord
+sudo yay -S brave-bin
 
 #######################################
-# 2 - Installation & Configuration terminal emulator
+# 2 - Installation & Configuration terminal
 #######################################
 sudo pacman -S starship
 sudo pacman -S ttf-joypixels
