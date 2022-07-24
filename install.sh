@@ -3,33 +3,30 @@
 sudo pacman -Syu
 yaourt -Syua
 
-# Bluetooth
-sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
-sudo systemctl enable --now bluetooth
+# Tools install
+  # System tools
+  sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
+  sudo systemctl enable --now bluetooth
 
-# Github-cli
-sudo pacman -S github-cli
+  # Developer tools
+  sudo pacman -S github-cli
+  sudo pacman -S docker
+  sudo systemctl start docker.service
+  sudo systemctl enable docker.service
 
-# Docker
-sudo pacman -S docker
-sudo systemctl start docker.service
-sudo systemctl enable docker.service
+  # Language build tools
+  sudo pacman -S dotnet-runtime
+  sudo pacman -S dotnet-sdk
+  sudo pacman -S rust
 
-# Dotnet
-sudo pacman -S dotnet-runtime
-sudo pacman -S dotnet-sdk
+  # IDE's
+  yay -S visual-studio-code-bin
+  sudo pacman -S neovim
 
-# Rust
-sudo pacman -S rust
+  # Personal tools
+  sudo pacman -S discord
 
-# IDE: VS Code
-sudo pacman -S code
-
-# IDE: Neovim
-sudo pacman -S neovim
-
-# Discord
-sudo pacman -S discord
+# Terminal Install / configuration
 
 # ZSH https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
 sudo pacman -S zsh
