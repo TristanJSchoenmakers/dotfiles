@@ -16,7 +16,7 @@ sudo pacman -Syu
   # Language build tools
   sudo pacman -S dotnet-runtime
   sudo pacman -S dotnet-sdk
-  sudo pacman -S rust
+  sudo pacman -S rustup
 
   # IDE's
   yay -S visual-studio-code-bin
