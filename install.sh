@@ -2,30 +2,34 @@
 # -*- ENCODING: UTF-8 -*-
 sudo pacman -Syu
 
-# Tools install
-  # System tools
-  sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
-  sudo systemctl enable --now bluetooth
+#######################################
+# 1 - Install packages
+#######################################
+# System tools
+sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
+sudo systemctl enable --now bluetooth
 
-  # Developer tools
-  sudo pacman -S github-cli
-  sudo pacman -S docker
-  sudo systemctl start docker.service
-  sudo systemctl enable docker.service
+# Developer tools
+sudo pacman -S github-cli
+sudo pacman -S docker
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
 
-  # Language build tools
-  sudo pacman -S dotnet-runtime
-  sudo pacman -S dotnet-sdk
-  sudo pacman -S rustup
+# Language build tools
+sudo pacman -S dotnet-runtime
+sudo pacman -S dotnet-sdk
+sudo pacman -S rustup
 
-  # IDE's
-  yay -S visual-studio-code-bin
-  sudo pacman -S neovim
+# IDE's
+yay -S visual-studio-code-bin
+sudo pacman -S neovim
 
-  # Personal tools
-  sudo pacman -S discord
+# Personal tools
+sudo pacman -S discord
 
-# Terminal Install / configuration
+#######################################
+# 2 - Installation & Configuration terminal emulator
+#######################################
 
 # ZSH https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
 sudo pacman -S zsh
