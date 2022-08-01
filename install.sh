@@ -10,7 +10,6 @@ sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
 sudo systemctl enable --now bluetooth
 
 # Developer tools
-sudo pacman -S github-cli
 sudo pacman -S docker
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
