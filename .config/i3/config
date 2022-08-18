@@ -179,7 +179,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# My added stuff
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
+hide_edge_borders smart
+new_window pixel
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
