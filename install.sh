@@ -27,25 +27,10 @@ sudo pacman -S neovim
 sudo pacman -S discord
 sudo yay -S brave-bin
 
-#######################################
-# 2 - Installation & Configuration terminal
-#######################################
+# Terminal
+sudo pacman -S alacritty
 sudo pacman -S starship
 sudo pacman -S ttf-joypixels
-echo "eval \"\$(starship init bash)\"" >> ~/.bashrc
-echo "# Get editor completions based on the config schema
-\"\$schema\" = 'https://starship.rs/config-schema.json'
-
-# Inserts a blank line between shell prompts
-add_newline = true
-
-# Also show dotnet when there is a solution file in the directory
-[dotnet]
-detect_extensions = [\"csproj\", \"sln\"]
-
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true" > ~/.config/starship.toml
 
 # Docker-Desktop
 # Download link: https://docs.docker.com/desktop/release-notes/
