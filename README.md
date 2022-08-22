@@ -1,5 +1,4 @@
-My personal post-installation script for EndeavourOS.
-Installs all the software and packages I need on my fresh install.
+My personal dotfiles
 
 ## Getting started
 
