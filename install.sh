@@ -6,10 +6,6 @@ sudo pacman -Syu
 # 1 - Install packages
 #######################################
 
-# Bluetooth
-sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
-sudo systemctl enable --now bluetooth
-
 # Program language build tools
 sudo pacman -S dotnet-sdk dotnet-runtime rust
 
