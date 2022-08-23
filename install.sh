@@ -23,5 +23,9 @@ sudo yay -S brave-bin
 # Terminal
 sudo pacman -S alacritty starship ttf-joypixels
 
+# Tui's
+sudo pacman -S ranger
+yay -S bluetuith
+
 # Desktop
 sudo pacman -S i3-gabs feh
