@@ -15,6 +15,20 @@ import os
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
 
+class nv(Command):
+    """:nv <filename>
+
+    Opens the specified file in neovim
+    """
+
+    def execute(self):
+        if not self.arg(1):
+            self.fm.edit_file(self.fm.thisdir.path)
+        else:
+            self.fm.edit_file(self.rest(1))
+
+    def tab(self, tabnum):
+        return self._tab_directory_content()
 
 # Any class that is a subclass of "Command" will be integrated into ranger as a
 # command.  Try typing ":my_edit<ENTER>" in ranger!

@@ -61,7 +61,7 @@ M.general = {
     ["<S-b>"] = { "<cmd> enew <CR>", "new buffer" },
 
     -- close buffer + hide terminal buffer
-    ["<leader>x"] = {
+    ["<A-q>"] = {
       function()
         require("core.utils").close_buffer()
       end,
@@ -87,14 +87,14 @@ M.tabufline = {
 
   n = {
     -- cycle through buffers
-    ["<TAB>"] = {
+    ["<A-l>"] = {
       function()
         require("core.utils").tabuflineNext()
       end,
       "goto next buffer",
     },
 
-    ["<S-Tab>"] = {
+    ["<A-h>"] = {
       function()
         require("core.utils").tabuflinePrev()
       end,
