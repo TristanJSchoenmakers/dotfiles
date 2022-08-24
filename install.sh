@@ -7,23 +7,23 @@ sudo pacman -Syu
 #######################################
 
 # Program language build tools
-sudo pacman -S dotnet-sdk dotnet-runtime rust
+sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime rust
 
 # IDE
-sudo pacman -S neovim rust-analyzer
+sudo pacman -S --noconfirm neovim rust-analyzer
 
 # Personal tools
-sudo pacman -S discord qutebrowser
+sudo pacman -S --noconfirm discord qutebrowser
 
 # Terminal
-sudo pacman -S alacritty starship
+sudo pacman -S --noconfirm alacritty starship ttf-jetbrains-mono
 
 # Tui's
-sudo pacman -S ranger
-yay -S bluetuith
+sudo pacman -S --noconfirm ranger
+yay -S --noconfirm bluetuith
 
 # Desktop
-sudo pacman -S i3-gabs feh
+sudo pacman -S --noconfirm i3-gabs feh
 
 #######################################
 # 2 - Replace bash files
