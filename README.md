@@ -1,18 +1,35 @@
 My personal dotfiles
 
+
 ## Getting started
 
-#### Step 1 - Download the script & place it in the home directory
 
-#### Step 2 - Update the permissions of the script
+#### 1 - Install Arch Linux
+
+
+#### 2 - Clone repository
 ``` bash
-sudo chmod +x ~/install.sh
+git clone https://github.com/TristanJSchoenmakers/dotfiles.git
 ```
 
-#### Step 3 - Run the script
+
+#### 3 - Move directory
 ``` bash
-sudo bash install.sh   
+mv dotfiles .config
 ```
+
+
+#### 4 - update permissions install script
+``` bash
+sudo chmod +x ~/.config/install.sh
+```
+
+
+#### 3 - Run the script
+``` bash
+sudo bash ~/.confiq/install.sh   
+```
+
 
 ## Sources
 - [Make a post installation script](https://www.addictivetips.com/ubuntu-linux-tips/make-ubuntu-post-installation-script/)

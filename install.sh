@@ -13,8 +13,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime rust
 sudo pacman -S neovim rust-analyzer
 
 # Personal tools
-sudo pacman -S discord
-sudo yay -S brave-bin
+sudo pacman -S discord qutebrowser
 
 # Terminal
 sudo pacman -S alacritty starship ttf-joypixels
@@ -25,3 +24,8 @@ yay -S bluetuith
 
 # Desktop
 sudo pacman -S i3-gabs feh
+
+#######################################
+# 2 - Replace bash files
+#######################################
+cp .bashrc ../
