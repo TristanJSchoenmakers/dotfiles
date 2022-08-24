@@ -24,7 +24,7 @@ sudo pacman -S --noconfirm ranger
 yay -S --noconfirm bluetuith
 
 # Desktop
-sudo pacman -S --noconfirm i3-gabs feh
+sudo pacman -S --noconfirm i3-gabs feh rofi
 
 
 #######################################
