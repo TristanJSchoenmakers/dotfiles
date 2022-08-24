@@ -191,6 +191,6 @@ new_window pixel
 bar {
   position top
   status_command i3status
-#  mode hide
+  mode hide
 }
 

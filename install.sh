@@ -38,3 +38,4 @@ cp .bashrc ../
 #######################################
 git config credential.helper store
 git config --global credential.helper store
+git config --global pull.rebase true
