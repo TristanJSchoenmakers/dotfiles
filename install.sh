@@ -16,7 +16,7 @@ sudo pacman -S neovim rust-analyzer
 sudo pacman -S discord qutebrowser
 
 # Terminal
-sudo pacman -S alacritty starship ttf-joypixels
+sudo pacman -S alacritty starship
 
 # Tui's
 sudo pacman -S ranger

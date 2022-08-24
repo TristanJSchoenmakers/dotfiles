@@ -3,19 +3,14 @@ window:
 
 font:
   normal:
-    family: monospace
+    family: JetBrains Mono
     style: Regular
 
   bold:
-    family: monospace
     style: Bold
 
   italic:
-    family: monospace
+    family: JetBrains Mono
     style: Italic
 
-  bold_italic:
-    family: monospace
-    style: Bold Italic
-
-  size: 12
+  size: 12.0
