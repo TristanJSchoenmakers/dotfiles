@@ -181,7 +181,7 @@ bindsym $mod+r mode "resize"
 
 # My added stuff
 exec_always --no-startup-id picom &
-exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg
 hide_edge_borders smart
 new_window pixel
 
