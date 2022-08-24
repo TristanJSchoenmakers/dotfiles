@@ -29,4 +29,3 @@ sudo pacman -S --noconfirm i3-gabs feh
 # 2 - Replace bash files
 #######################################
 cp .bashrc ../
-
