@@ -2,6 +2,7 @@
 # -*- ENCODING: UTF-8 -*-
 sudo pacman -Syu
 
+
 #######################################
 # 1 - Install packages
 #######################################
@@ -25,7 +26,15 @@ yay -S --noconfirm bluetuith
 # Desktop
 sudo pacman -S --noconfirm i3-gabs feh
 
+
 #######################################
 # 2 - Replace bash files
 #######################################
 cp .bashrc ../
+
+
+#######################################
+# 3 - Configuration
+#######################################
+git config credential.helper store
+git config --global credential.helper store
