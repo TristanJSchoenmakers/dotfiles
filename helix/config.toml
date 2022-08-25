@@ -1,0 +1,7 @@
+theme = "onedark"
+
+[editor]
+mouse = false
+
+[editor.lsp]
+display-messages = true

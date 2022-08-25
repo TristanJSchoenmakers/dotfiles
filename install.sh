@@ -10,8 +10,9 @@ sudo pacman -Syu
 # Program language build tools
 sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime rust
 
-# IDE
+# IDE & LSP's
 sudo pacman -S --noconfirm neovim rust-analyzer
+yay -S --noconfirm omnisharp-roslyn
 
 # Personal tools
 sudo pacman -S --noconfirm discord qutebrowser
