@@ -15,8 +15,8 @@ import os
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
 
-class nv(Command):
-    """:nv <filename>
+class hx(Command):
+    """:hx <filename>
 
     Opens the specified file in neovim
     """

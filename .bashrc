@@ -10,13 +10,15 @@ PS1='[\u@\h \W]\$ '
 alias ls='ls --color=auto'
 alias ra='ranger'
 alias nv='nvim'
+alias hx='helix'
 alias blui='bluetuith'
 alias qe='qutebrowser'
 
 # Environment variables
-export VISUAL=nvim;
-export EDITOR=nvim;
+export VISUAL=helix;
+export EDITOR=helix;
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export PATH=~/.cargo/bin:$PATH
 
 # Functions
 function gsync(){

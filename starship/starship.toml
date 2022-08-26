@@ -4,7 +4,6 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-# Also show dotnet when there is a solution file in the directory
 [dotnet]
 detect_extensions = ["csproj", "sln"]
 
