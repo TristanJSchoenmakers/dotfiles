@@ -10,6 +10,10 @@ sudo pacman -Syu
 # Package manager
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
 
+# Audio & Bluetooth
+sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth bluez bluez-utils 
+sudo systemctl enable bluetooth
+
 # DM & WM
 sudo pacman -S --noconfirm xorg xorg-xinit i3 feh rofi
 yay -S ly
