@@ -21,6 +21,7 @@ sudo pacman -S --noconfirm alacritty starship ttf-jetbrains-mono
 
 # Program language build tools
 sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime rust
+cargo install bacon
 
 # IDE & LSP's
 sudo pacman -S --noconfirm helix rust-analyzer
