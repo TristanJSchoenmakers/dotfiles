@@ -8,9 +8,8 @@ sudo pacman -Syu
 #######################################
 
 # Package manager
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin
-makepkg -si && cd .. && rm -rf yay-bin
- 
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
+
 # DM & WM
 sudo pacman -S --noconfirm xorg xorg-xinit i3 feh rofi
 yay -S ly
