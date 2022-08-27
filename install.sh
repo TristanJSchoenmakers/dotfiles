@@ -6,10 +6,15 @@ sudo pacman -Syu
 #######################################
 # 1 - Install packages
 #######################################
+
+# Package manager
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin
+makepkg -si && cd .. && rm -rf yay-bin
  
 # DM & WM
-sudo pacman -S --noconfirm i3-gabs feh rofi
-systemctl enable ly.service
+sudo pacman -S --noconfirm xorg xorg-xinit i3 feh rofi
+yay -S ly
+sudo systemctl enable ly.service
 
 # Terminal
 sudo pacman -S --noconfirm alacritty starship ttf-jetbrains-mono
@@ -18,7 +23,7 @@ sudo pacman -S --noconfirm alacritty starship ttf-jetbrains-mono
 sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime rust
 
 # IDE & LSP's
-sudo pacman -S --noconfirm neovim rust-analyzer
+sudo pacman -S --noconfirm helix rust-analyzer
 yay -S --noconfirm omnisharp-roslyn
 
 # Personal tools
@@ -26,7 +31,7 @@ sudo pacman -S --noconfirm discord qutebrowser
 
 # Tui's
 sudo pacman -S --noconfirm ranger
-yay -S --noconfirm bluetuith
+# yay -S --noconfirm bluetuith
 
 
 #######################################
