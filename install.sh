@@ -6,6 +6,13 @@ sudo pacman -Syu
 #######################################
 # 1 - Install packages
 #######################################
+ 
+# DM & WM
+sudo pacman -S --noconfirm i3-gabs feh rofi
+systemctl enable ly.service
+
+# Terminal
+sudo pacman -S --noconfirm alacritty starship ttf-jetbrains-mono
 
 # Program language build tools
 sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime rust
@@ -17,15 +24,9 @@ yay -S --noconfirm omnisharp-roslyn
 # Personal tools
 sudo pacman -S --noconfirm discord qutebrowser
 
-# Terminal
-sudo pacman -S --noconfirm alacritty starship ttf-jetbrains-mono
-
 # Tui's
 sudo pacman -S --noconfirm ranger
 yay -S --noconfirm bluetuith
-
-# Desktop
-sudo pacman -S --noconfirm i3-gabs feh rofi
 
 
 #######################################
