@@ -19,7 +19,7 @@ sudo systemctl enable ly.service
 sudo pacman -S --noconfirm alacritty starship ttf-jetbrains-mono
 
 # Program language build tools
-sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime rust
+sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime aspnet-runtime aspnet-targeting-pack rust
 cargo install bacon
 
 # IDE & LSP's
