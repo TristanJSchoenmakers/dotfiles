@@ -34,7 +34,7 @@ yay -S --noconfirm omnisharp-roslyn
 sudo pacman -S --noconfirm discord qutebrowser
 
 # Tui's
-sudo pacman -S --noconfirm ranger
+sudo pacman -S --noconfirm ranger gitui
 # yay -S --noconfirm bluetuith
 
 
