@@ -20,15 +20,14 @@ yay -S ly
 sudo systemctl enable ly.service
 
 # Terminal
-sudo pacman -S --noconfirm alacritty starship ttf-jetbrains-mono
+sudo pacman -S --noconfirm alacritty starship nerd-fonts-fira-code
 
 # Program language build tools
-sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime aspnet-runtime aspnet-targeting-pack rust
-cargo install bacon
+sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime aspnet-runtime aspnet-targeting-pack rust bacon
 
 # IDE & LSP's
 sudo pacman -S --noconfirm helix rust-analyzer
-yay -S --noconfirm omnisharp-roslyn
+yay -S --noconfirm omnisharp-roslyn vscode-langservers-extracted
 
 # Personal tools
 sudo pacman -S --noconfirm discord qutebrowser
@@ -41,7 +40,7 @@ sudo pacman -S --noconfirm ranger gitui
 #######################################
 # 2 - Replace bash files
 #######################################
-cp .bashrc ../
+cp bash/.bashrc ../
 
 
 #######################################

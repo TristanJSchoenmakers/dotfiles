@@ -10,8 +10,8 @@ font pango:JetBrains Mono 9
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg
 
 # Start applications on startup
-exec i3-msg 'workspace 1 Web; exec qutebrowser'
-exec --no-startup-id i3-msg 'workspace 2 Notes; exec alacritty --hold -e helix PersonalDoc/Index.md'
+exec i3-msg 'workspace 1; exec qutebrowser'
+exec --no-startup-id i3-msg 'workspace 2; exec alacritty --hold -e helix PersonalDoc/Index.md'
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -89,9 +89,9 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Define names for default workspaces
-set $ws1 "1 Web"	
-set $ws2 "2 Notes"	
-set $ws3 "3 Code"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -124,8 +124,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-workspace "1 Web" output DP-1
-workspace "2 Notes" output DP-1
+workspace "1" output DP-1
+workspace "2" output DP-1
 
 # shutdown, restart, reload config
 bindsym $mod+Shift+q exec --no-startup-id systemctl poweroff -i, mode "default"
@@ -154,12 +154,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # If only of container on screen, no edge borders
-hide_edge_borders smart
+# hide_edge_borders smart
 
 # No title for container
 new_window pixel
 
-assign [class="qutebrowser"] 1 Web
+assign [class="qutebrowser"] 1
 
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 bar {

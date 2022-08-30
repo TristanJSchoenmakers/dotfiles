@@ -3,7 +3,7 @@ window:
 
 font:
   normal:
-    family: JetBrains Mono
+    family: FiraCode Nerd Font
     style: Regular
 
   bold:
@@ -18,7 +18,7 @@ font:
 # Theme: One Dark
 colors:
   primary:
-    background: '0x222222'
+    background: '0x222228'
     foreground: '0xabb2bf'
     bright_foreground: '0xe6efff'
 
