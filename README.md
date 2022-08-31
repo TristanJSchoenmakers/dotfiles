@@ -27,7 +27,7 @@ sudo chmod +x ~/.config/install.sh
 
 #### 3 - Run the script
 ``` bash
-sudo bash ~/.confiq/install.sh   
+bash ~/.confiq/install.sh   
 ```
 
 

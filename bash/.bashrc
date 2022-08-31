@@ -1,6 +1,4 @@
-#
-# ~/.bashrc
-#
+#!/bin/bash
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -14,11 +12,17 @@ alias hx='helix'
 alias blui='bluetuith'
 alias qe='qutebrowser'
 
-# Environment variables
-export VISUAL=helix;
-export EDITOR=helix;
+# Environment variables: Default programs / Config files location / App cache location / XDG locations
+export VISUAL=helix
+export EDITOR=helix
+export BROWSER=qutebrowser
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-export PATH=~/.cargo/bin:$PATH
+export CARGO_HOME=~/.local/share/cargo
+export GOPATH=~/.local/share/go
+export XDG_CONFIG_HOME=~/.config
+export XDG_DATA_HOME=~/.local/share
+export XDG_CACHE_HOME=~/.cache
+export XINITRC=~/.config/x11/xinitrc
 
 # Functions
 function gsync(){

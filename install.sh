@@ -7,11 +7,11 @@ sudo pacman -Syu
 # 1 - Install packages
 #######################################
 
-# Package manager
+# AUR Package manager yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
 
 # Audio & Bluetooth
-sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth bluez bluez-utils 
+sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth bluez bluez-utils
 sudo systemctl enable bluetooth
 
 # DM & WM
@@ -38,14 +38,9 @@ sudo pacman -S --noconfirm ranger gitui
 
 
 #######################################
-# 2 - Replace bash files
+# 2 - Configuration
 #######################################
-cp bash/.bashrc ../
-
-
-#######################################
-# 3 - Configuration
-#######################################
+echo "source ~/.config/bash/.lol" > ~/.bashrc
 git config credential.helper store
 git config --global credential.helper store
 git config --global pull.rebase true

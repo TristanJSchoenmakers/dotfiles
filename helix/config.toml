@@ -7,7 +7,7 @@ mouse = false
 display-messages = true
 
 [keys.normal]
-"A-l" = ":buffer-next"
-"A-h" = ":buffer-previous"
-"A-q" = ":buffer-close"
-"G" = ":g 99999999"
+"A-l"  = ":buffer-next"
+"A-h"  = ":buffer-previous"
+"A-q"  = ":buffer-close"
+"G"    = ":g 99999999"
