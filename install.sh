@@ -4,6 +4,21 @@ sudo pacman -Syu
 
 
 #######################################
+# 0 - Set Environment variables
+#######################################
+export VISUAL=helix
+export EDITOR=helix
+export BROWSER=qutebrowser
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export CARGO_HOME=~/.local/share/cargo
+export GOPATH=~/.local/share/go
+export XDG_CONFIG_HOME=~/.config
+export XDG_DATA_HOME=~/.local/share
+export XDG_CACHE_HOME=~/.cache
+export XINITRC=~/.config/x11/xinitrc
+
+
+#######################################
 # 1 - Install packages
 #######################################
 
@@ -30,11 +45,10 @@ sudo pacman -S --noconfirm helix rust-analyzer
 yay -S --noconfirm omnisharp-roslyn vscode-langservers-extracted
 
 # Personal tools
-sudo pacman -S --noconfirm discord qutebrowser
+sudo pacman -S --noconfirm discord qutebrowser firefox
 
 # Tui's
 sudo pacman -S --noconfirm ranger gitui
-# yay -S --noconfirm bluetuith
 
 
 #######################################
