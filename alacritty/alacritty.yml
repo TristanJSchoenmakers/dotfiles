@@ -10,7 +10,7 @@ font:
     style: Bold
 
   italic:
-    family: JetBrains Mono
+    family: FiraCode Nerd Font
     style: Italic
 
   size: 12

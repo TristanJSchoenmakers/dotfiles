@@ -42,6 +42,6 @@ config.set("colors.webpage.darkmode.enabled", True)
 
 config.bind('<Alt-q>', 'tab-close')
 
-config.bind('<Alt-l>', 'tab-focus +1')
+config.bind('<Alt-l>', 'tab-next')
 
-config.bind('<Alt-h>', 'tab-focus -1')
+config.bind('<Alt-h>', 'tab-prev')
