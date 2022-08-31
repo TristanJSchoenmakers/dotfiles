@@ -1,4 +1,4 @@
-My personal dotfiles
+My personal dotfiles with a post-install script to set things up
 
 
 ## Getting started
@@ -6,28 +6,36 @@ My personal dotfiles
 
 #### 1 - Install Arch Linux
 
+I recommend using the guided installer 'archinstall'
+
+- [archinstall - ArchWiki](https://wiki.archlinux.org/title/Archinstall)
+
 
 #### 2 - Clone repository
+
 ``` bash
 git clone https://github.com/TristanJSchoenmakers/dotfiles.git
 ```
 
 
 #### 3 - Move directory
+
 ``` bash
 mv dotfiles .config
 ```
 
 
 #### 4 - update permissions install script
+
 ``` bash
 sudo chmod +x ~/.config/install.sh
 ```
 
 
 #### 3 - Run the script
+
 ``` bash
-bash ~/.confiq/install.sh   
+~/.confiq/install.sh   
 ```
 
 
