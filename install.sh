@@ -32,8 +32,8 @@ if ! builtin type -p 'yay' >/dev/null 2>&1; then
   tmpdir="$(command mktemp -d)"
   command cd "${tmpdir}" || return 1
   sudo pacman -Sy --needed --noconfirm base base-devel git
-  git clone https://aur.archlinux.org/yay-bin.git
-  cd yay-bin
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
   makepkg -si
   cd $CWD
 fi
@@ -87,10 +87,6 @@ echo
 
 echo "source ~/.config/bash/.bashrc" > ~/.bashrc
 
-git config credential.helper store
-git config --global credential.helper store
-git config --global pull.rebase true
-
 sudo systemctl enable bluetooth
 sudo systemctl enable ly.service
 
@@ -98,6 +94,11 @@ CWD=`pwd`
 cd $home
 rm -rf $HOME/.config
 git clone https://github.com/TristanJSchoenmakers/dotfiles.git $HOME/.config
+
+git config credential.helper store
+git config --global credential.helper store
+git config --global pull.rebase true
+
 cd $CWD
 
 
