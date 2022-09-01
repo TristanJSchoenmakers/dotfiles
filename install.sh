@@ -2,10 +2,12 @@
 # -*- ENCODING: UTF-8 -*-
 sudo pacman -Syu
 
+echo
+echo '#######################################'
+echo '# 0 - Set Environment variables        '
+echo '#######################################'
+echo
 
-#######################################
-# 0 - Set Environment variables
-#######################################
 export VISUAL=helix
 export EDITOR=helix
 export BROWSER=qutebrowser
@@ -18,43 +20,93 @@ export XDG_CACHE_HOME=~/.cache
 export XINITRC=~/.config/x11/xinitrc
 
 
-#######################################
-# 1 - Install packages
-#######################################
+echo 
+echo '#######################################'
+echo '# 1 - Install packages                 '
+echo '#######################################'
+echo 
 
-# AUR Package manager yay
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
-
-# Audio & Bluetooth
-sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth bluez bluez-utils
-sudo systemctl enable bluetooth
-
-# DM & WM
-sudo pacman -S --noconfirm xorg xorg-xinit i3 feh rofi
-yay -S ly
-sudo systemctl enable ly.service
-
-# Terminal
-sudo pacman -S --noconfirm alacritty starship nerd-fonts-fira-code
-
-# Program language build tools
-sudo pacman -S --noconfirm dotnet-sdk dotnet-runtime aspnet-runtime aspnet-targeting-pack rust bacon
-
-# IDE & LSP's
-sudo pacman -S --noconfirm helix rust-analyzer
-yay -S --noconfirm omnisharp-roslyn vscode-langservers-extracted
-
-# Personal tools
-sudo pacman -S --noconfirm discord qutebrowser firefox
-
-# Tui's
-sudo pacman -S --noconfirm ranger gitui
+if ! builtin type -p 'yay' >/dev/null 2>&1; then
+  CWD=`pwd`
+  echo 'Install yay.'
+  tmpdir="$(command mktemp -d)"
+  command cd "${tmpdir}" || return 1
+  sudo pacman -Sy --needed --noconfirm base base-devel git
+  git clone https://aur.archlinux.org/yay-bin.git
+  cd yay-bin
+  makepkg -si
+  cd $CWD
+fi
 
 
-#######################################
-# 2 - Configuration
-#######################################
-echo "source ~/.config/bash/.lol" > ~/.bashrc
+declare -a packages=(
+  # Audio & Bluetooth
+  pulseaudio
+  pulseaudio-bluetooth
+  bluez
+  bluez-utils
+  # DM & WM
+  xorg
+  xorg-init
+  i3
+  feh
+  rofi
+  # Terminal
+  alacritty
+  starship
+  nerd-fonts-fira-code
+  # Program language build tools
+  dotnet-sdk
+  dotnet-runtime
+  aspnet-runtime
+  aspnet-targeting-pack
+  rust
+  bacon
+  # IDE & LSP's
+  helix
+  rust-analyzer
+  omnisharp-roslyn
+  vscode-langservers-extracted
+  # TUI's
+  lf
+  gitui
+  # Personal tools
+  discord
+  qutebrowser
+  firefox
+)
+
+for i in "${packages[@]}"; do yay -Sy --noconfirm $i; done
+
+
+echo
+echo '#######################################'
+echo '# 2 - Configuration'
+echo '#######################################'
+echo
+
+echo "source ~/.config/bash/.bashrc" > ~/.bashrc
+
 git config credential.helper store
 git config --global credential.helper store
 git config --global pull.rebase true
+
+sudo systemctl enable bluetooth
+sudo systemctl enable ly.service
+
+CWD=`pwd`
+cd $home
+rm -rf $HOME/.config
+git clone https://github.com/TristanJSchoenmakers/dotfiles.git $HOME/.config
+cd $CWD
+
+
+echo
+echo '#######################################'
+echo '##      Installation complete!       ##'
+echo '#######################################'
+echo
+
+printf "Would you like to reboot? (y/N)"
+read -r reboot
+[ "$(tr '[:upper:]' '[:lower:]' <<< "$reboot")" = "y" ] && reboot

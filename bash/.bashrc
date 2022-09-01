@@ -12,7 +12,7 @@ alias hx='helix'
 alias blui='bluetuith'
 alias qe='qutebrowser'
 
-# Environment variables: Default programs / Config files location / App cache location / XDG locations
+# Environment variables: Default programs / Config files location / App cache location / XDG locations / PATH
 export VISUAL=helix
 export EDITOR=helix
 export BROWSER=qutebrowser
@@ -23,6 +23,7 @@ export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
 export XDG_CACHE_HOME=~/.cache
 export XINITRC=~/.config/x11/xinitrc
+export PATH=~/.local/share/cargo/bin:$PATH
 
 # Functions
 function gsync(){
