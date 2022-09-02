@@ -1,43 +1,46 @@
 # My version of the onedark theme from: https://github.com/helix-editor/helix/blob/master/runtime/themes/onedark.toml
 # Author : Gokul Soumya <gokulps15@gmail.com>
 
-"namespace" = { fg = "dark-blue" }
-# "module" = { fg = "black" }'
+"namespace" = { fg = "white" }
+"module" = { fg = "white" }
 
-"type" = { fg = "yellow" }
-"type.enum.variant" = { fg = "light-green" }
-"constructor" = { fg = "blue" }
+"type" = { fg = "green" }
+"type.enum.variant" = { fg = "green1" }
+# "constructor" = { fg = "type" }
+# "variable.other.member" = { fg = "variable" }
 
 "keyword" = { fg = "blue" }
-"keyword.control" = { fg = "purple" }
-"keyword.operator" = { fg = "purple" }
-"keyword.control.import" = { fg = "red" }
-"keyword.directive" = { fg = "purple" }
-"label" = { fg = "purple" }
+"keyword.directive" = { fg = "blue" }
+# "keyword.control" = { fg = "special" }
+"label" = { fg = "blue" }
+"tag" = "blue"
 
-"operator" = { fg = "purple" }
-"special" = { fg = "blue" }
+"special" = { fg = "white" }
+"operator" = { fg = "white" }
 
-# "variable" = { fg = "blue" }
-# "variable.builtin" = { fg = "blue" }
-# "variable.parameter" = { fg = "red" }
-# "variable.other.member" = { fg = "red" }
-"constant" = { fg = "gold" }
-# "constant.numeric" = { fg = "gold" }
-# "constant.builtin" = { fg = "gold" }
-# "constant.character.escape" = { fg = "gold" }
+"punctuation" = { fg = "white" }
+"punctuation.delimiter" = { fg = "white" }
 
-# "function" = { fg = "blue" }
-"function.builtin" = { fg = "blue" }
-"function.macro" = { fg = "red" }
+"variable" = { fg = "white" }
+"variable.parameter" = { fg = "white" }
+"variable.builtin" = { fg = "blue" }
+"constant" = { fg = "white" }
+"constant.builtin" = { fg = "blue" }
+
+"function" = { fg = "yellow" }
+"function.builtin" = { fg = "yellow" }
+"function.macro" = { fg = "yellow" }
 "attribute" = { fg = "yellow" }
 
 "comment" = { fg = "light-gray", modifiers = ["italic"] }
 
-"string" = { fg = "green" }
+"string" = { fg = "orange" }
+"constant.character" = { fg = "orange" }
+# "string.regexp" = { fg = "gold" }
+# "constant.numeric" = { fg = "pale_green" }
+"constant.character.escape" = { fg = "gold" }
 
-"markup.heading" = { fg = "red", modifiers =["bold"] }
-"markup.heading.marker" = { fg = "light-gray" }
+"markup.heading" = { fg = "red" }
 "markup.raw.inline" = { fg = "green" }
 "markup.bold" = { fg = "gold", modifiers = ["bold"] }
 "markup.italic" = { fg = "purple", modifiers = ["italic"] }
@@ -82,7 +85,7 @@ diagnostic = { modifiers = ["underlined"] }
 "ui.text" = { fg = "white" }
 "ui.text.focus" = { fg = "white", bg = "light-black", modifiers = ["bold"] }
 
-"ui.help" = { bg = "gray" }
+"ui.help" = { fg = "white", bg = "gray" }
 "ui.popup" = { bg = "gray" }
 "ui.window" = { fg = "gray" }
 "ui.menu" = { fg = "white", bg = "gray" }
@@ -90,14 +93,23 @@ diagnostic = { modifiers = ["underlined"] }
 "ui.menu.scroll" = { fg = "white", bg = "light-gray" }
 
 [palette]
-nord7 = "#6fbc9b"
+
+background = "#1E1E1E"
+comment = "#608B4E"
+variable = "#9CDCFE"
+keyword = "#C586C0"
+number = "#B5CEA8"
+constant = "#B4CEA8"
+bool = "#569CD6"
+string = "#D69D85"
+
+
 yellow = "#E5C07B"
 blue = "#61AFEF"
-dark-blue = "#518FAF"
 red = "#E06C75"
 purple = "#C678DD"
 green = "#98C379"
-light-green = "#98E399"
+green1 = "#4EC9B0"
 gold = "#D19A66"
 cyan = "#56B6C2"
 white = "#ABB2BF"
@@ -107,3 +119,5 @@ gray = "#3E4452"
 faint-gray = "#3B4048"
 light-gray = "#5C6370"
 linenr = "#4B5263"
+
+orange = "#ce9178"

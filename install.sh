@@ -51,10 +51,12 @@ declare -a packages=(
   i3
   feh
   rofi
-  # Terminal
+  # Terminal & CLI's
   alacritty
   starship
   nerd-fonts-fira-code
+  mediainfo
+  man-db
   # Program language build tools
   dotnet-sdk
   dotnet-runtime
