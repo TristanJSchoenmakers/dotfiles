@@ -91,6 +91,8 @@ cd $home
 rm -rf $HOME/.config
 git clone https://github.com/TristanJSchoenmakers/dotfiles.git $HOME/.config
 
+cd ./.config
+
 git config credential.helper store
 git config --global credential.helper store
 git config --global pull.rebase true
