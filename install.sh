@@ -53,6 +53,7 @@ declare -a packages=(
   nerd-fonts-fira-code
   mediainfo
   man-db
+  bat
   # Program language build tools
   dotnet-sdk
   dotnet-runtime
