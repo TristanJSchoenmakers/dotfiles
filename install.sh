@@ -2,11 +2,9 @@
 # -*- ENCODING: UTF-8 -*-
 sudo pacman -Syu
 
-echo
-echo '#######################################'
-echo '# 0 - Set Environment variables        '
-echo '#######################################'
-echo
+#######################################
+# 0 - Set Environment variables        
+#######################################
 
 export VISUAL=helix
 export EDITOR=helix
@@ -20,15 +18,12 @@ export XDG_CACHE_HOME=~/.cache
 export XINITRC=~/.config/x11/xinitrc
 
 
-echo 
-echo '#######################################'
-echo '# 1 - Install packages                 '
-echo '#######################################'
-echo 
+#######################################
+# 1 - Install packages                 
+#######################################
 
 if ! builtin type -p 'yay' >/dev/null 2>&1; then
   CWD=`pwd`
-  echo 'Install yay.'
   tmpdir="$(command mktemp -d)"
   command cd "${tmpdir}" || return 1
   sudo pacman -Sy --needed --noconfirm base base-devel git
@@ -51,6 +46,7 @@ declare -a packages=(
   i3
   feh
   rofi
+  ly
   # Terminal & CLI's
   alacritty
   starship
@@ -78,14 +74,12 @@ declare -a packages=(
   firefox
 )
 
-for i in "${packages[@]}"; do yay -Sy --noconfirm $i; done
+for i in "${packages[@]}"; do yay -S --noconfirm $i; done
 
 
-echo
-echo '#######################################'
-echo '# 2 - Configuration'
-echo '#######################################'
-echo
+#######################################
+# 2 - Configuration
+#######################################
 
 echo "source ~/.config/bash/.bashrc" > ~/.bashrc
 
@@ -103,13 +97,4 @@ git config --global pull.rebase true
 
 cd $CWD
 
-
-echo
-echo '#######################################'
-echo '##      Installation complete!       ##'
-echo '#######################################'
-echo
-
-printf "Would you like to reboot? (y/N)"
-read -r reboot
-[ "$(tr '[:upper:]' '[:lower:]' <<< "$reboot")" = "y" ] && reboot
+printf "Installation complete! Please reboot your system" 
