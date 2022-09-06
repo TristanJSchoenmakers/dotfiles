@@ -6,7 +6,7 @@
 
 "type" = { fg = "AAAclassname" }
 "type.enum.variant" = { fg = "AAAtypename" }
-# "constructor" = { fg = "type" }
+# "constructor" = { fg = "orange" }
 # "variable.other.member" = { fg = "variable" }
 
 "keyword" = { fg = "AAAconstbuildin" }

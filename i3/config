@@ -154,7 +154,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # If only of container on screen, no edge borders
-# hide_edge_borders smart
+hide_edge_borders smart
 
 # No title for container
 new_window pixel
