@@ -11,7 +11,7 @@
 
 "keyword" = { fg = "AAAconstbuildin" }
 "keyword.directive" = { fg = "AAAkeyword" }
-# "keyword.control" = { fg = "special" }
+"keyword.control" = { fg = "AAAkeyword" }
 "label" = { fg = "AAAconstbuildin" }
 "tag" = "AAAconstbuildin"
 
