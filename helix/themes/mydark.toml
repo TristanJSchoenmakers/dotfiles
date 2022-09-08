@@ -5,15 +5,14 @@
 "module" = { fg = "AAAoperator" }
 
 "type" = { fg = "AAAclassname" }
-"type.enum.variant" = { fg = "AAAtypename" }
+"type.enum.variant" = { fg = "light-green" }
 # "constructor" = { fg = "orange" }
-# "variable.other.member" = { fg = "variable" }
 
-"keyword" = { fg = "AAAconstbuildin" }
-"keyword.directive" = { fg = "AAAkeyword" }
-"keyword.control" = { fg = "AAAkeyword" }
-"label" = { fg = "AAAconstbuildin" }
-"tag" = "AAAconstbuildin"
+"keyword" = { fg = "dark-blue" }
+"keyword.directive" = { fg = "pink" }
+"keyword.control" = { fg = "pink" }
+"label" = { fg = "dark-blue" }
+"tag" = "dark-blue"
 
 "special" = { fg = "white" }
 "operator" = { fg = "AAAoperator" }
@@ -36,14 +35,16 @@
 # "constant.numeric" = { fg = "pale_green" }
 "constant.character.escape" = { fg = "gold" }
 
-"markup.heading" = { fg = "red" }
+"markup.heading" = { fg = "AAAoperator", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "markupmarker" }
+"markup.heading.1" = { fg = "AAAoperator", modifiers = ["bold", "underlined"] }
 "markup.raw.inline" = { fg = "green" }
 "markup.bold" = { fg = "gold", modifiers = ["bold"] }
 "markup.italic" = { fg = "purple", modifiers = ["italic"] }
-"markup.list" = { fg = "red" }
+"markup.list" = { fg = "dark-blue" }
 "markup.quote" = { fg = "yellow" }
-"markup.link.url" = { fg = "cyan", modifiers = ["underlined"]}
-"markup.link.text" = { fg = "purple" }
+"markup.link.url" = { fg = "light-gray"}
+"markup.link.text" = { fg = "dark-blue" }
 
 "diff.plus" = "green"
 "diff.delta" = "gold"
@@ -55,7 +56,7 @@ diagnostic = { modifiers = ["underlined"] }
 "warning" = { fg = "yellow", modifiers = ["bold"] }
 "error" = { fg = "red", modifiers = ["bold"] }
 
-"ui.background" = { bg = "black" }
+"ui.background" = { bg = "bg" }
 "ui.virtual" = { fg = "faint-gray" }
 "ui.virtual.indent-guide" = { fg = "faint-gray" }
 "ui.virtual.whitespace" = { fg = "light-gray" }
@@ -90,23 +91,11 @@ diagnostic = { modifiers = ["underlined"] }
 
 [palette]
 
-background = "#1E1E1E"
-comment = "#608B4E"
-variable = "#9CDCFE"
-keyword = "#C586C0"
-number = "#B5CEA8"
-constant = "#B4CEA8"
-bool = "#569CD6"
-string = "#D69D85"
-
-
 blue = "#61AFEF"
 red = "#E06C75"
 purple = "#C678DD"
 green = "#98C379"
-green1 = "#4EC9B0"
 gold = "#D19A66"
-cyan = "#56B6C2"
 white = "#ABB2BF"
 black = "#282C34"
 light-black = "#2C323C"
@@ -114,24 +103,23 @@ gray = "#3E4452"
 faint-gray = "#3B4048"
 light-gray = "#5C6370"
 linenr = "#4B5263"
-
 orange = "#ce9178"
 
 # vs colors
-AAAbg = "#222228"
-AAAcomment = "#608B4E"
-AAAvariable = "#9CDCFE"
-AAAkeyword = "#C586C0"
+bg = "#252931"
+dark-blue = "#569CD6"       # Main neutral color used for non-control operators, markdown character etc.
+light-blue = "#9CDCFE"      # Currently not used
+light-green = "#B5CEA8"     # Used for Enum types
+dark-green = "#608B4E"      # Currently no use
+pink = "#C586C0"
+
 AAAoperator = "#DCDCDC"
-AAAnumber = "#B5CEA8"
-AAAconst = "#B4CEA8"
-AAAconstbuildin = "#569CD6"
-AAAbool = "#569CD6"
 AAAstring = "#D69D85"
 AAAstringinterpolation = "#E3BBAB"
-AAAfunctionname = "#DCDCAA"
 function = "#DCDCAC"
 AAAclassname = "#4EC9B0"
 AAAtypename = "#569CD6"
 AAAinherclassname = "#4EC9B0"
 AAAfunctionargandresult = "#70727E"
+
+markupmarker = "#484C54"
