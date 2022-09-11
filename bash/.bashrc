@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 alias ra='ranger'
 alias nv='nvim'
 alias hx='helix'
-alias blui='bluetuith'
+alias blui='bluetoothctl'
 alias qe='qutebrowser'
 
 # Environment variables: Default programs / Config files location / App cache location / XDG locations / PATH
