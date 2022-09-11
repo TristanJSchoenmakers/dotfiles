@@ -17,3 +17,16 @@ cmd open ${{
     esac
 }}
 
+# cmd delete ${{
+# 	clear; tput cup $(($(tput lines)/3))
+# 	set -f
+# 	# printf "$fx\n"
+# 	printf "delete?[y/n]"
+# 	read ans
+# 	[ "$ans" = "y" ] && rm -rf $fx
+# }}
+
+# Bindings
+map d delete
+map x cut
+map r rename

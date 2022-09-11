@@ -6,23 +6,5 @@
 
 config_version: 2
 settings:
-  aliases:
-    global:
-      q: close
-      qa: quit
-      w: session-save
-      wq: quit --save
-      wqa: quit --save
-  auto_save.interval:
-    global: 15000
-  bindings.key_mappings:
-    global:
-      <Ctrl-6>: <Ctrl-^>
-      <Ctrl-Enter>: <Ctrl-Return>
-      <Ctrl-I>: <Tab>
-      <Ctrl-J>: <Return>
-      <Ctrl-M>: <Return>
-      <Ctrl-[>: <Escape>
-      <Enter>: <Return>
-      <Shift-Enter>: <Return>
-      <Shift-Return>: <Return>
+  content.register_protocol_handler:
+    https://outlook.live.com?mailtouri=%25s: false
