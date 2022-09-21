@@ -69,6 +69,7 @@ declare -a packages=(
   # TUI's
   lf
   gitui
+  bottom
   # Personal tools
   discord
   qutebrowser

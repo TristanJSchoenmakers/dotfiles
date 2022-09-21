@@ -1,7 +1,7 @@
 # My version of the onedark theme from: https://github.com/helix-editor/helix/blob/master/runtime/themes/onedark.toml
 # Author : Gokul Soumya <gokulps15@gmail.com>
 
-"namespace" = { fg = "AAAoperator " }
+"namespace" = { fg = "AAAoperator" }
 "module" = { fg = "AAAoperator" }
 
 "type" = { fg = "AAAclassname" }

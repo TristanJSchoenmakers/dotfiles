@@ -6,7 +6,11 @@ color-modes = true
 completion-trigger-len = 1      # min-lenght to start auto-completion
 
 [keys.normal]
-"A-l"  = ":buffer-next"
-"A-h"  = ":buffer-previous"
+"j"    = "move_char_left"
+"k"    = "move_line_down"
+"l"    = "move_line_up"
+";"    = "move_char_right"
+"A-;"  = ":buffer-next"
+"A-j"  = ":buffer-previous"
 "A-q"  = ":buffer-close"
 "G"    = ":g 99999999"

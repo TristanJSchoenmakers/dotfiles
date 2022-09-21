@@ -27,6 +27,10 @@ cmd open ${{
 # }}
 
 # Bindings
+map j updir
+map k down
+map l up
+map ; open
 map d delete
 map x cut
 map r rename
