@@ -42,6 +42,6 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 
 config.bind('<Alt-q>', 'tab-close')
 
-config.bind('<Alt-l>', 'tab-next')
+config.bind('<Alt-;>', 'tab-next')
 
-config.bind('<Alt-h>', 'tab-prev')
+config.bind('<Alt-j>', 'tab-prev')
