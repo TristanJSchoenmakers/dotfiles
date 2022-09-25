@@ -13,6 +13,9 @@ exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg
 exec i3-msg 'workspace 1; exec qutebrowser'
 exec --no-startup-id i3-msg 'workspace 2; exec alacritty --hold -e helix PersonalDoc/Index.md'
 
+# polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 # exec --no-startup-id dex --autostart --environment i3
@@ -165,9 +168,9 @@ client.focused  	#555961 #555961 #FFFFFF #2e9ef4 #285577
 client.unfocused	#181818 #181818 #888888 #292d2e #222222
 
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
-bar {
-  position top
-  status_command i3status
+# bar {
+#  position top
+#  status_command i3status
 #  mode hide
-}
+# }
 

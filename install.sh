@@ -46,6 +46,7 @@ declare -a packages=(
   i3
   feh
   rofi
+  polybar
   ly
   # Terminal & CLI's
   alacritty
@@ -55,10 +56,6 @@ declare -a packages=(
   man-db
   bat
   # Program language build tools
-  dotnet-sdk
-  dotnet-runtime
-  aspnet-runtime
-  aspnet-targeting-pack
   rust
   bacon
   # IDE & LSP's
