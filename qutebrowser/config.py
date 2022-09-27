@@ -38,10 +38,16 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # Enable dark mode
-# config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.preferred_color_scheme", "dark")
 
+# Caret
+config.bind('<j>', 'scroll left')
+config.bind('<k>', 'scroll down')
+config.bind('<l>', 'scroll up')
+config.bind('<;>', 'scroll right')
+
+# Tab
 config.bind('<Alt-q>', 'tab-close')
-
 config.bind('<Alt-;>', 'tab-next')
-
 config.bind('<Alt-j>', 'tab-prev')
+
