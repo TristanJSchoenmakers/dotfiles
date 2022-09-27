@@ -10,7 +10,13 @@ completion-trigger-len = 1      # min-lenght to start auto-completion
 "k"    = "move_line_down"
 "l"    = "move_line_up"
 ";"    = "move_char_right"
-"A-;"  = ":buffer-next"
-"A-j"  = ":buffer-previous"
+"A-;"  = "goto_next_buffer"
+"A-j"  = "goto_previous_buffer"
 "A-q"  = ":buffer-close"
-"G"    = ":g 99999999"
+"G"    = "goto_file_end"
+
+[keys.select]
+"j"    = "extend_char_left"
+"k"    = "extend_line_down"
+"l"    = "extend_line_up"
+";"    = "extend_char_right"
