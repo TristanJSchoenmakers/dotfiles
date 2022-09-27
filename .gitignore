@@ -10,7 +10,7 @@
 !lf/**
 !neofetch/**
 !polybar/**
-!qutebrowser/**
+!qutebrowser/config.py
 !rofi/**
 !starship/**
 !README.md

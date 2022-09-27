@@ -22,7 +22,6 @@ export GOPATH=~/.local/share/go
 export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
 export XDG_CACHE_HOME=~/.cache
-export XINITRC=~/.config/x11/xinitrc
 export PATH=~/.local/share/cargo/bin:$PATH
 
 # Functions
