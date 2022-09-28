@@ -2,7 +2,6 @@
 !alacritty/**
 !bash/**
 !bottom/**
-!dconf/**
 !fish/**
 !gitui/**
 !helix/**
