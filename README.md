@@ -1,5 +1,12 @@
 My personal dotfiles with a post-install script to set things up
 
+- wm: i3
+- dm: ly
+- rofi
+- polybar
+- alacritty
+- helix
+- qutebrowser
 
 ## Getting started
 
