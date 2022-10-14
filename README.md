@@ -14,7 +14,9 @@ I recommend using the guided installer 'archinstall'
 #### 2 - Excecute install script
 
 ``` bash
-curl https://raw.githubusercontent.com/TristanJSchoenmakers/dotfiles/main/install.sh | /bin/sh
+curl -LO https://raw.githubusercontent.com/TristanJSchoenmakers/dotfiles/main/install.sh
+
+bash install.sh
 ```
 
 
