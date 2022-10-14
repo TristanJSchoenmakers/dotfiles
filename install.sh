@@ -42,12 +42,10 @@ declare -a packages=(
   # Audio & Bluetooth
   pulseaudio
   pulseaudio-bluetooth
-  # bluez
   bluez-utils
   # DM & WM
-  xorg
-  xorg-init
-  i3
+  xorg-xinit
+  i3-gaps
   feh
   rofi
   polybar
@@ -73,7 +71,7 @@ declare -a packages=(
   # Personal tools
   discord
   qutebrowser
-  firefox
+  brave-bin
 )
 
 for i in "${packages[@]}"; do yay -S --noconfirm $i; done
