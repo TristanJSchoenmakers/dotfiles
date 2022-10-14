@@ -37,7 +37,8 @@
 
 "markup.heading" = { fg = "AAAoperator", modifiers = ["bold"] }
 "markup.heading.marker" = { fg = "markupmarker" }
-"markup.heading.1" = { fg = "AAAoperator", modifiers = ["bold", "underlined"] }
+"markup.heading.1" = { fg = "red", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "dark-blue", modifiers = ["bold"] }
 "markup.raw.inline" = { fg = "green" }
 "markup.bold" = { fg = "gold", modifiers = ["bold"] }
 "markup.italic" = { fg = "purple", modifiers = ["italic"] }

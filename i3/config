@@ -12,7 +12,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Start applications on startup
 exec i3-msg 'workspace 1; exec qutebrowser'
-exec --no-startup-id i3-msg 'workspace 2; exec alacritty --hold -e helix PersonalDoc/Index.md'
+exec --no-startup-id i3-msg 'workspace 2; exec alacritty -e helix PersonalDoc/Index.md'
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -29,7 +29,8 @@ font pango:JetBrains Mono 9
 hide_edge_borders smart
 
 # No title for container
-new_window pixel
+# new_window pixel
+for_window [class="^.*"] border pixel 1
 
 client.focused  	#555961 #555961 #FFFFFF #2e9ef4 #285577
 client.unfocused	#181818 #181818 #888888 #292d2e #222222
