@@ -58,7 +58,7 @@ declare -a packages=(
   man-db
   bat
   # Program language build tools
-  rust
+  rustup
   bacon
   # IDE & LSP's
   helix
