@@ -65,7 +65,6 @@ declare -a packages=(
   # IDE & LSP's
   helix
   rust-analyzer
-  omnisharp-roslyn
   vscode-langservers-extracted
   # TUI's
   lf
