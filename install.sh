@@ -1,5 +1,9 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
+
+pacman --noconfirm --needed -Sy libnewt ||
+	error "Are you sure you're running this as the root user, are on an Arch-based distribution and have an internet connection?"
+
 sudo pacman -Syu
 
 #######################################
@@ -38,7 +42,7 @@ declare -a packages=(
   # Audio & Bluetooth
   pulseaudio
   pulseaudio-bluetooth
-  bluez
+  # bluez
   bluez-utils
   # DM & WM
   xorg
