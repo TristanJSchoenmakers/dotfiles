@@ -44,7 +44,9 @@ declare -a packages=(
   pulseaudio-bluetooth
   bluez-utils
   # DM & WM
-  xorg
+  xorg-server
+  xorg-apps
+  xorg-xinit
   i3-gaps
   feh
   rofi
