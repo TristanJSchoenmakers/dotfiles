@@ -18,6 +18,7 @@ export EDITOR=helix
 export BROWSER=qutebrowser
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export CARGO_HOME=~/.local/share/cargo
+export RUSTUP_HOME=~/.local/share/cargo
 export GOPATH=~/.local/share/go
 export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
