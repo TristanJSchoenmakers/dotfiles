@@ -9,6 +9,6 @@
     gutter: None,
     default_border_color: "#000000",
     floating_border_color: "#8dace3",
-    focused_border_color: "#ACACAC",
+    focused_border_color: "#5969cb",
     on_new_window: None,
 )
