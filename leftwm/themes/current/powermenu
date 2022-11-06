@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 DIR="$HOME/.config/polybar/panels/menu"
-uptime=$(uptime -p | sed -e 's/up //g')
 
 theme="elementary_dark"
 
@@ -14,25 +13,10 @@ lock="  Lock"
 suspend="鈴  Sleep"
 logout="  Logout"
 
-# Confirmation
-confirm_exit() {
-	rofi -dmenu\
-        -no-config\
-		-i\
-		-no-fixed-num-lines\
-		-p "Are You Sure? : "\
-		-theme $DIR/$theme/confirm.rasi
-}
-
-# Message
-msg() {
-	rofi -no-config -theme "$DIR/$theme/message.rasi" -e "Available Options  -  yes / y / no / n"
-}
-
 # Variable passed to rofi
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
-chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
 case $chosen in
     $shutdown)
 			systemctl poweroff
