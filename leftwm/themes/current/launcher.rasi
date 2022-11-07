@@ -23,7 +23,7 @@ configuration {
   al:    #00000000;
   bg:    #1F1F1FFF;
   bg1:   #313131FF;
-  bg2:   #1976D2FF;
+  bg2:   #3949ABFF;
   bg3:   #1E88E5FF;
   bg4:   #2196F3FF;
   fg:    #FFFFFFFF;
