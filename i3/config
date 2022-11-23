@@ -8,28 +8,22 @@
 exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg
 
 # polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/i3/polybar/launch.sh
 
 # Start applications on startup
 exec i3-msg 'workspace 1; exec qutebrowser'
 exec --no-startup-id i3-msg 'workspace 2; exec alacritty -e helix PersonalDoc/Index.md'
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
 # -----------------
 # Bar & Styling
 # -----------------
 
-# Font for window titles. Will also be used by the bar unless a different font
 font pango:JetBrains Mono 9
 
 # If only of container on screen, no edge borders
 hide_edge_borders smart
 
 # No title for container
-# new_window pixel
 for_window [class="^.*"] border pixel 1
 
 client.focused  	#555961 #555961 #FFFFFF #2e9ef4 #285577
@@ -56,11 +50,11 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec alacritty
 
+# rofi
+bindsym $mod+o exec "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/i3/rofi/launcher.rasi"
+
 # kill focused window
 bindsym $mod+q kill
-
-# rofi
-bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
 # navigation
 bindsym $mod+j focus left
