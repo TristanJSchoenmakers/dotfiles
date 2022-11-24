@@ -10,10 +10,19 @@ completion-trigger-len = 1      # min-lenght to start auto-completion
 "k"    = "move_line_down"
 "l"    = "move_line_up"
 ";"    = "move_char_right"
+"G"    = "goto_file_end"
+# buffer
 "A-;"  = "goto_next_buffer"
 "A-j"  = "goto_previous_buffer"
 "A-q"  = ":buffer-close"
-"G"    = "goto_file_end"
+# window
+"C-o"  = "vsplit_new"
+"C-j"  = "jump_view_left"
+"C-k"  = "jump_view_down"
+"C-l"  = "jump_view_up"
+"C-;"  = "jump_view_right"
+"C-q"  = "wclose"
+"C-e"  = "transpose_view"
 
 [keys.select]
 "j"    = "extend_char_left"
