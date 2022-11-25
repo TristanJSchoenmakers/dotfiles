@@ -31,11 +31,12 @@ bash install.sh
 
 In my hotkey I try to use the following logic as much as possible
 
-The `Super` Control Key is for OS/WM hotkeys
 
-The `Control` Control Key is for windows in application
+##### Modifier keys
 
-The `Alt` Control Key is for tabs in a application
+- `Super` For OS/WM
+- `Ctrl` For windows in application
+- `Alt` For tabs in a application
 
 
 ##### Movement
