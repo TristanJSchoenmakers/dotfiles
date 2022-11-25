@@ -54,3 +54,10 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0x828791'
+
+key_bindings:
+  - { key: N,  mods: Control,        action: CreateNewWindow }
+#  - { key: V,  mods: Control,        action: Paste           }
+#  - { key: C,  mods: Control,        action: Copy            }
+#  - { key: Z,  mods: Control,        action: ClearSelection  }
+#  - { key: R,  mods: Control,        action: ClearLogNotice  }
