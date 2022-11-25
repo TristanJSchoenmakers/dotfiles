@@ -28,3 +28,6 @@ config.bind('<Alt-q>', 'tab-close')
 config.bind('<Alt-;>', 'tab-next')
 config.bind('<Alt-j>', 'tab-prev')
 
+# Other
+config.bind('<Ctrl-r>', 'reload')
+

@@ -48,7 +48,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+n exec alacritty
 
 # rofi
 bindsym $mod+o exec "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/i3/rofi/launcher.rasi"

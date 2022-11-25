@@ -11,11 +11,11 @@ completion-trigger-len = 1      # min-lenght to start auto-completion
 "l"    = "move_line_up"
 ";"    = "move_char_right"
 "G"    = "goto_file_end"
-# buffer
+# Tab/Buffer
 "A-;"  = "goto_next_buffer"
 "A-j"  = "goto_previous_buffer"
 "A-q"  = ":buffer-close"
-# window
+# Window
 "C-o"  = "vsplit_new"
 "C-j"  = "jump_view_left"
 "C-k"  = "jump_view_down"

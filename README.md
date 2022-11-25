@@ -35,7 +35,7 @@ In my hotkey I try to use the following logic as much as possible
 ##### Modifier keys
 
 - `Super` For OS/WM
-- `Ctrl` For windows in application
+- `Ctrl` For windows in a application
 - `Alt` For tabs in a application
 
 
@@ -47,7 +47,7 @@ In my hotkey I try to use the following logic as much as possible
 - **ControlKey + ;** Switch to right application/window/tab
 
 
-##### Changing position
+##### Move position focussed application/window/tab
 
 - **ControlKey + shift + j** Move current application/window/tab one left
 - **ControlKey + shift + k** Move current application/window/tab one bottom
@@ -59,6 +59,7 @@ In my hotkey I try to use the following logic as much as possible
 
 - **ControlKey + o** Open application/window/tab
 - **ControlKey + n** New application/window/tab
+- **ControlKey + q** Close current application/window/tab
 
 
 ## Sources
