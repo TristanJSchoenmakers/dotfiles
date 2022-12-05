@@ -59,6 +59,11 @@ declare -a packages=(
   mediainfo
   man-db
   bat
+  # File viewers
+  sxiv
+  zathura
+  zathura-pdf-mupdf
+  mpv
   # Program language build tools
   rustup
   bacon
@@ -70,10 +75,13 @@ declare -a packages=(
   lf
   gitui
   bottom
+  lazydocker
   # Personal tools
   discord
   qutebrowser
   brave-bin
+  docker
+  docker-compose
 )
 
 for i in "${packages[@]}"; do yay -S --noconfirm $i; done

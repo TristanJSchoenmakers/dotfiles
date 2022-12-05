@@ -13,5 +13,6 @@
 !qutebrowser/config.py
 !rofi/**
 !starship/**
+!zathura/**
 !README.md
 !install.sh

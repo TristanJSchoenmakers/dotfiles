@@ -13,6 +13,8 @@ cmd open ${{
         audio/*) mpv --audio-display=no $f ;;
         video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
         application/pgp-encrypted) $EDITOR $fx ;;
+        image/*) setsid -f sxiv $f ;;
+        application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
         *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
     esac
 }}

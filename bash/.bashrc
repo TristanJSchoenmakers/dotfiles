@@ -24,7 +24,8 @@ export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
 export XDG_CACHE_HOME=~/.cache
 export PATH=~/.local/share/cargo/bin:$PATH
-export LS_COLORS='*E.md=33:*e.md=33:.git/=90:.config/=90:.local/=90:.cache/=90:.pki/=90:target/=90:'
+export LS_COLORS='*.md=33'
+# export LS_COLORS='*.md=33:.git=90:.config=90:.local=90:.cache=90:.pki=90:target=90:'
 
 # Functions
 function gsync(){
