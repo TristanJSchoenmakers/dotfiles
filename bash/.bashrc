@@ -5,12 +5,13 @@
 PS1='[\u@\h \W]\$ '
 
 # Aliases
-alias ls='ls --color=auto -a'
-alias hx='helix'
 alias blui='bluetoothctl'
-alias ld='sudo lazydocker'
+alias c="clear"
 alias docker='sudo docker'
 alias gi='gitui'
+alias hx='helix'
+alias ld='sudo lazydocker'
+alias ls='ls --color=auto -a'
 
 # Environment variables
 export VISUAL=helix

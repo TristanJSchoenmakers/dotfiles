@@ -53,6 +53,9 @@ bindsym $mod+n exec alacritty
 # rofi
 bindsym $mod+o exec "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/i3/rofi/launcher.rasi"
 
+# flameshot
+bindsym $mod+Shift+s exec "flameshot gui"
+
 # kill focused window
 bindsym $mod+q kill
 
