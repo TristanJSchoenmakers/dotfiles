@@ -52,6 +52,7 @@ declare -a packages=(
   rofi
   polybar
   ly
+  flameshot
   # Terminal & CLI's
   alacritty
   starship
@@ -64,7 +65,7 @@ declare -a packages=(
   zathura
   zathura-pdf-mupdf
   mpv
-  # Program language build tools
+  # Programming language build tools
   rustup
   bacon
   # IDE & LSP's
