@@ -23,6 +23,7 @@ export XDG_CACHE_HOME=~/.cache
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export CARGO_HOME=~/.local/share/cargo
 export RUSTUP_HOME=~/.local/share/cargo
+export NUGET_PACKAGES=~/.local/share/Nuget
 export GOPATH=~/.local/share/go
 export PATH=~/.local/share/cargo/bin:$PATH
 export LS_COLORS='*.md=34:'
