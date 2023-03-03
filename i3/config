@@ -13,7 +13,6 @@ exec_always --no-startup-id $HOME/.config/i3/polybar/launch.sh
 
 # Start applications on startup
 exec i3-msg 'workspace 1; exec qutebrowser'
-exec --no-startup-id i3-msg 'workspace 2; exec alacritty -e helix ./Documents/_PersonalDoc/README.md'
 
 
 # -----------------
