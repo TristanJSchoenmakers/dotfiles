@@ -12,18 +12,23 @@ completion-trigger-len = 1      # min-lenght to start auto-completion
 "l"    = "move_line_up"
 ";"    = "move_char_right"
 "G"    = "goto_file_end"
+"n"    = "open_below"
+"N"    = "open_above"
+"o"    = "file_picker"
+"O"    = "file_picker_in_current_directory"
 # Tab/Buffer
 "A-;"  = "goto_next_buffer"
 "A-j"  = "goto_previous_buffer"
 "A-q"  = ":buffer-close"
 # Window
 "C-o"  = "vsplit_new"
-"C-j"  = "jump_view_left"
-"C-k"  = "jump_view_down"
-"C-l"  = "jump_view_up"
-"C-;"  = "jump_view_right"
+"C-h"  = "jump_view_left"
+"C-j"  = "jump_view_down"
+"C-k"  = "jump_view_up"
+"C-l"  = "jump_view_right"
 "C-q"  = "wclose"
 "C-e"  = "transpose_view"
+
 
 [keys.select]
 "j"    = "extend_char_left"
