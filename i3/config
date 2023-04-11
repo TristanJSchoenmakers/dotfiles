@@ -35,8 +35,8 @@ client.unfocused	#181818 #181818 #888888 #292d2e #222222
 # Workspace
 # -----------------
 
-workspace "1" output DP-1
-workspace "2" output DP-1
+workspace "1" output primary
+workspace "2" output primary
 
 assign [class="qutebrowser"] 1
 

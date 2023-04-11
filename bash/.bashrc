@@ -9,7 +9,6 @@ alias blui='bluetoothctl'
 alias c="clear"
 alias docker='sudo docker'
 alias gi='gitui'
-alias hx='helix'
 alias ld='sudo lazydocker'
 alias ls='ls --color=auto -a'
 

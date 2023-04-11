@@ -12,8 +12,8 @@ completion-trigger-len = 1      # min-lenght to start auto-completion
 "l"    = "move_line_up"
 ";"    = "move_char_right"
 "G"    = "goto_file_end"
-"n"    = "open_below"
-"N"    = "open_above"
+# "n"    = "open_below"
+# "N"    = "open_above"
 "o"    = "file_picker"
 "O"    = "file_picker_in_current_directory"
 # Tab/Buffer
