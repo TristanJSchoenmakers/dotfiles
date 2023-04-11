@@ -29,7 +29,6 @@ completion-trigger-len = 1      # min-lenght to start auto-completion
 "C-q"  = "wclose"
 "C-e"  = "transpose_view"
 
-
 [keys.select]
 "j"    = "extend_char_left"
 "k"    = "extend_line_down"
