@@ -56,10 +56,11 @@ declare -a packages=(
   # Terminal & CLI's
   alacritty
   starship
-  nerd-fonts-fira-code
+  ttf-fira-code
   mediainfo
   man-db
   bat
+  glow
   # File viewers
   sxiv
   zathura
@@ -96,6 +97,7 @@ echo "source ~/.config/bash/.bashrc" > ~/.bashrc
 
 sudo systemctl enable bluetooth
 sudo systemctl enable ly.service
+sudo systemctl enable docker.service
 
 CWD=`pwd`
 cd $home
