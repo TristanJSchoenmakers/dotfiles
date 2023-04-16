@@ -1,4 +1,9 @@
-My personal dotfiles with a post-install script to set things up
+<div align="center">
+  <h1>dotfiles</h1>
+  <p>
+    <strong>My personal dotfiles with a post-install script to set things up</strong>
+  </p>
+</div>
 
 - wm: i3
 - dm: ly
@@ -61,8 +66,3 @@ In my hotkey I try to use the following logic as much as possible
 - **ControlKey + n** New application/window/tab
 - **ControlKey + q** Close current application/window/tab
 
-
-## Sources
-
-- [Make a post installation script](https://www.addictivetips.com/ubuntu-linux-tips/make-ubuntu-post-installation-script/)
-- [Remove default folders](https://weibeld.net/linux/remove-default-folders.html)
