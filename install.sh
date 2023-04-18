@@ -53,14 +53,23 @@ declare -a packages=(
   polybar
   ly
   flameshot
-  # Terminal & CLI's
+  # Fonts
+  ttf-fira-code
+  noto-fonts-cjk
+  noto-fonts-emoji
+  noto-fonts-extra
+  # Terminal & Shell prompt
   alacritty
   starship
-  ttf-fira-code
+  # CLI's & TUI's
   mediainfo
   man-db
   bat
   glow
+  lf
+  gitui
+  bottom
+  lazydocker
   # File viewers
   sxiv
   zathura
@@ -74,10 +83,6 @@ declare -a packages=(
   rust-analyzer
   vscode-langservers-extracted
   # TUI's
-  lf
-  gitui
-  bottom
-  lazydocker
   # Personal tools
   discord
   qutebrowser
