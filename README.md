@@ -1,17 +1,23 @@
 <div align="center">
   <h1>dotfiles</h1>
   <p>
-    <strong>My personal dotfiles with a post-install script to set things up</strong>
+    <strong>My personal Arch Linux dotfiles with a post-install script to set things up</strong>
   </p>
+
+
+| Software | Choice | Note
+| ------------- |:-------------:|-------------|
+| Window Manager | [i3](https://wiki.archlinux.org/title/I3) | 
+| Display Manager | [ly](https://github.com/fairyglade/ly) | 
+| Status Bar | [polybar](https://github.com/jaagr/polybar) | 
+| Launcher | [rofi](https://wiki.archlinux.org/index.php/rofi) | 
+| Terminal      | [alacritty](https://github.com/alacritty/alacritty) | with Bash as shell & [starship](https://starship.rs/) as shell prompt
+| Editor      | [helix](https://github.com/helix-editor/helix) | 
+| File Manager | [lf](https://github.com/gokcehan/lf) | terminal file manager
+
+
 </div>
 
-- wm: i3
-- dm: ly
-- rofi
-- polybar
-- alacritty
-- helix
-- qutebrowser
 
 ## Getting started
 
@@ -34,7 +40,7 @@ bash install.sh
 
 ## Hotkeys
 
-In my hotkey I try to use the following logic as much as possible
+In my hotkey setup I try to use the following logic as much as possible
 
 
 ##### Modifier keys
