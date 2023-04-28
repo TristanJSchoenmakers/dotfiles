@@ -77,10 +77,8 @@ declare -a packages=(
   mpv
   # Programming language build tools
   rustup
-  bacon
   # IDE & LSP's
   helix
-  rust-analyzer
   vscode-langservers-extracted
   # TUI's
   # Personal tools
@@ -92,6 +90,12 @@ declare -a packages=(
 )
 
 for i in "${packages[@]}"; do yay -S --noconfirm $i; done
+
+# Install Rust tools
+rustup component add rust-analyzer
+cargo install --locked bacon
+cargo install --locked cargo-expand
+cargo install --locked mdbook
 
 
 #######################################
