@@ -45,9 +45,9 @@ In my hotkey setup I try to use the following logic as much as possible
 
 ##### Modifier keys
 
-- `Super` For OS/WM
-- `Ctrl` For windows in a application
-- `Alt` For tabs in a application
+- `Super` For OS/WM related hotkeys
+- `Ctrl` For windows within a application related hotkeys
+- `Alt` For tabs in a application related hotkeys
 
 
 ##### Movement
