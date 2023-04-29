@@ -1,8 +1,42 @@
 # My version of the onedark theme from: https://github.com/helix-editor/helix/blob/master/runtime/themes/onedark.toml
-# Author : Gokul Soumya <gokulps15@gmail.com>
 
-"namespace" = { fg = "AAAoperator" }
-"module" = { fg = "AAAoperator" }
+# Theme - UI
+"ui.background" = { bg = "#252931" }
+"ui.virtual" = { fg = "faint-gray" }
+"ui.virtual.indent-guide" = { fg = "faint-gray" }
+"ui.virtual.whitespace" = { fg = "light-gray" }
+"ui.virtual.ruler" = { bg = "gray" }
+
+"ui.cursor" = { fg = "greywhite", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "greywhite", modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "blue", modifiers = ["underlined"]}
+
+"ui.selection" = { bg = "light-gray" }
+"ui.selection.primary" = { bg = "gray" }
+"ui.cursorline.primary" = { bg = "light-black" }
+
+"ui.linenr" = { fg = "#4B5263" }
+"ui.linenr.selected" = { fg = "greywhite" }
+
+"ui.statusline" = { fg = "greywhite", bg = "light-black" }
+"ui.statusline.inactive" = { fg = "light-gray", bg = "light-black" }
+"ui.statusline.normal" = { fg = "light-black", bg = "blue" }
+"ui.statusline.insert" = { fg = "light-black", bg = "green" }
+"ui.statusline.select" = { fg = "light-black", bg = "purple" }
+
+"ui.text" = { fg = "greywhite" }
+"ui.text.focus" = { fg = "greywhite", bg = "light-black", modifiers = ["bold"] }
+
+"ui.help" = { fg = "greywhite", bg = "gray" }
+"ui.popup" = { bg = "gray" }
+"ui.window" = { fg = "gray" }
+"ui.menu" = { fg = "greywhite", bg = "gray" }
+"ui.menu.selected" = { fg = "black", bg = "blue" }
+"ui.menu.scroll" = { fg = "greywhite", bg = "light-gray" }
+
+# Theme - Code
+"namespace" = { fg = "white" }
+"module" = { fg = "white" }
 
 "type" = { fg = "AAAclassname" }
 "type.enum.variant" = { fg = "light-green" }
@@ -14,15 +48,14 @@
 "label" = { fg = "dark-blue" }
 "tag" = "dark-blue"
 
-"special" = { fg = "white" }
-"operator" = { fg = "AAAoperator" }
+"special" = { fg = "greywhite" }
+"operator" = { fg = "white" }
 
-"punctuation" = { fg = "white" }
-"punctuation.delimiter" = { fg = "white" }
+"punctuation" = { fg = "greywhite" }
+"punctuation.delimiter" = { fg = "greywhite" }
 
-"variable" = { fg = "AAAoperator" }
-#"variable.parameter" = { fg = "white" }
-"constant" = { fg = "white" }
+"variable" = { fg = "white" }
+"constant" = { fg = "greywhite" }
 
 "function" = { fg = "function" }
 "attribute" = { fg = "function" }
@@ -31,11 +64,10 @@
 
 "string" = { fg = "orange" }
 "constant.character" = { fg = "orange" }
-# "string.regexp" = { fg = "gold" }
-# "constant.numeric" = { fg = "pale_green" }
 "constant.character.escape" = { fg = "gold" }
 
-"markup.heading" = { fg = "AAAoperator", modifiers = ["bold"] }
+# Theme - Markdown
+"markup.heading" = { fg = "white", modifiers = ["bold"] }
 "markup.heading.marker" = { fg = "markupmarker" }
 "markup.heading.1" = { fg = "red", modifiers = ["bold"] }
 "markup.heading.2" = { fg = "dark-blue", modifiers = ["bold"] }
@@ -57,64 +89,30 @@ diagnostic = { modifiers = ["underlined"] }
 "warning" = { fg = "yellow", modifiers = ["bold"] }
 "error" = { fg = "red", modifiers = ["bold"] }
 
-"ui.background" = { bg = "bg" }
-"ui.virtual" = { fg = "faint-gray" }
-"ui.virtual.indent-guide" = { fg = "faint-gray" }
-"ui.virtual.whitespace" = { fg = "light-gray" }
-"ui.virtual.ruler" = { bg = "gray" }
-
-"ui.cursor" = { fg = "white", modifiers = ["reversed"] }
-"ui.cursor.primary" = { fg = "white", modifiers = ["reversed"] }
-"ui.cursor.match" = { fg = "blue", modifiers = ["underlined"]}
-
-"ui.selection" = { bg = "light-gray" }
-"ui.selection.primary" = { bg = "gray" }
-"ui.cursorline.primary" = { bg = "light-black" }
-
-"ui.linenr" = { fg = "linenr" }
-"ui.linenr.selected" = { fg = "white" }
-
-"ui.statusline" = { fg = "white", bg = "light-black" }
-"ui.statusline.inactive" = { fg = "light-gray", bg = "light-black" }
-"ui.statusline.normal" = { fg = "light-black", bg = "blue" }
-"ui.statusline.insert" = { fg = "light-black", bg = "green" }
-"ui.statusline.select" = { fg = "light-black", bg = "purple" }
-
-"ui.text" = { fg = "white" }
-"ui.text.focus" = { fg = "white", bg = "light-black", modifiers = ["bold"] }
-
-"ui.help" = { fg = "white", bg = "gray" }
-"ui.popup" = { bg = "gray" }
-"ui.window" = { fg = "gray" }
-"ui.menu" = { fg = "white", bg = "gray" }
-"ui.menu.selected" = { fg = "black", bg = "blue" }
-"ui.menu.scroll" = { fg = "white", bg = "light-gray" }
 
 [palette]
+white = "#DCDCDC" # white for code
+greywhite = "#ABB2BF" # darker white for UI elements 
+gray = "#3E4452"
+light-black = "#2C323C"
+faint-gray = "#3B4048"
+light-gray = "#5C6370"
 
 blue = "#61AFEF"
 red = "#E06C75"
 purple = "#C678DD"
 green = "#98C379"
 gold = "#D19A66"
-white = "#ABB2BF"
 black = "#282C34"
-light-black = "#2C323C"
-gray = "#3E4452"
-faint-gray = "#3B4048"
-light-gray = "#5C6370"
-linenr = "#4B5263"
 orange = "#ce9178"
 
 # vs colors
-bg = "#252931"
 dark-blue = "#569CD6"       # Main neutral color used for non-control operators, markdown character etc.
 light-blue = "#9CDCFE"      # Currently not used
 light-green = "#B5CEA8"     # Used for Enum types
 dark-green = "#608B4E"      # Currently no use
 pink = "#C586C0"
 
-AAAoperator = "#DCDCDC"
 AAAstring = "#D69D85"
 AAAstringinterpolation = "#E3BBAB"
 function = "#DCDCAC"
