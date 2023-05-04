@@ -58,7 +58,8 @@
 "constant" = { fg = "greywhite" }
 
 "function" = { fg = "function" }
-"attribute" = { fg = "function" }
+"function.macro" = { fg = "light-red" }
+"attribute" = { fg = "light-red" }
 
 "comment" = { fg = "light-gray", modifiers = ["italic"] }
 
@@ -100,6 +101,7 @@ light-gray = "#5C6370"
 
 blue = "#61AFEF"
 red = "#E06C75"
+light-red = "#E08C95"
 purple = "#C678DD"
 green = "#98C379"
 gold = "#D19A66"

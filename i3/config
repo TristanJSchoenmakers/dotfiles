@@ -1,4 +1,29 @@
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# See more keys and their definitions at https://i3wm.org/docs/userguide.html
+
+# -----------------
+# Bar & Styling
+# -----------------
+
+font pango:JetBrains Mono 9
+
+# If only of container on screen, no edge borders
+hide_edge_borders smart
+
+# No title for container
+for_window [class="^.*"] border pixel 2
+
+client.focused  	#555961 #555961 #FFFFFF #2e9ef4 #285597
+client.unfocused	#181818 #181818 #888888 #292d2e #222222
+
+
+# -----------------
+# Workspace
+# -----------------
+
+workspace "1" output primary
+workspace "2" output primary
+
+assign [class="qutebrowser"] 1
 
 
 # -----------------
@@ -16,37 +41,10 @@ exec i3-msg 'workspace 1; exec qutebrowser'
 
 
 # -----------------
-# Bar & Styling
-# -----------------
-
-font pango:JetBrains Mono 9
-
-# If only of container on screen, no edge borders
-hide_edge_borders smart
-
-# No title for container
-for_window [class="^.*"] border pixel 1
-
-client.focused  	#555961 #555961 #FFFFFF #2e9ef4 #285577
-client.unfocused	#181818 #181818 #888888 #292d2e #222222
-
-
-# -----------------
-# Workspace
-# -----------------
-
-workspace "1" output primary
-workspace "2" output primary
-
-assign [class="qutebrowser"] 1
-
-
-# -----------------
 # Bindings
 # -----------------
 
 set $mod Mod4
-
 
 # shutdown, restart, reload config
 bindsym $mod+Shift+q exec --no-startup-id systemctl poweroff -i, mode "default"
