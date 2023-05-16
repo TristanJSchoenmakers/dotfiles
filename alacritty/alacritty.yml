@@ -21,7 +21,7 @@ font:
 # Theme: One Dark
 colors:
   primary:
-    background: '0x252931'
+    background: '0x242830'
     foreground: '0xabb2bf'
     bright_foreground: '0xe6efff'
 
@@ -57,7 +57,3 @@ colors:
 
 key_bindings:
   - { key: N,  mods: Control,        action: CreateNewWindow }
-#  - { key: V,  mods: Control,        action: Paste           }
-#  - { key: C,  mods: Control,        action: Copy            }
-#  - { key: Z,  mods: Control,        action: ClearSelection  }
-#  - { key: R,  mods: Control,        action: ClearLogNotice  }
