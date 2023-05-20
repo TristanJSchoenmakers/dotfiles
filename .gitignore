@@ -7,7 +7,6 @@
 !i3/**
 !lf/**
 !polybar/**
-!qutebrowser/config.py
 !starship/**
 !README.md
 !install.sh
