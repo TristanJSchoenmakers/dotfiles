@@ -12,7 +12,7 @@ sudo pacman -Syu
 
 export VISUAL=helix
 export EDITOR=helix
-export BROWSER=qutebrowser
+export BROWSER=brave
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export CARGO_HOME=~/.local/share/cargo
 export GOPATH=~/.local/share/go
@@ -83,7 +83,6 @@ declare -a packages=(
   # TUI's
   # Personal tools
   discord
-  qutebrowser
   brave-bin
   docker
   docker-compose
