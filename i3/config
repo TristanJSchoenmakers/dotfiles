@@ -23,7 +23,7 @@ client.unfocused	#181818 #181818 #888888 #292d2e #222222
 workspace "1" output primary
 workspace "2" output primary
 
-assign [class="qutebrowser"] 1
+assign [class="brave"] 1
 
 
 # -----------------
@@ -37,8 +37,7 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg
 exec_always --no-startup-id $HOME/.config/i3/polybar/launch.sh
 
 # Start applications on startup
-exec i3-msg 'workspace 1; exec qutebrowser'
-
+exec --no-startup-id i3-msg 'workspace 1; exec alacritty -e bash -c "helix ./Documents/_Doc/README.md && bash"'
 
 # -----------------
 # Bindings
