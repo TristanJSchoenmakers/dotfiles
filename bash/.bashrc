@@ -16,14 +16,17 @@ alias code='code --extensions-dir ~/.cache/VsCode/extensions --user-data-dir ~/.
 # Path
 export PATH=~/.local/bin:$PATH
 export PATH=~/.local/share/cargo/bin:$PATH
+
 # Default Proframs
 export VISUAL=helix
 export EDITOR=helix
 export BROWSER=qutebrowser
-# XDG
+
+# XDG https://wiki.archlinux.org/title/XDG_Base_Directory
 export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
 export XDG_CACHE_HOME=~/.cache
+
 # Cleanup
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export CARGO_HOME=~/.local/share/cargo
