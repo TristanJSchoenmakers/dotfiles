@@ -13,12 +13,14 @@ sudo pacman -Syu
 export VISUAL=helix
 export EDITOR=helix
 export BROWSER=brave
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-export CARGO_HOME=~/.local/share/cargo
-export GOPATH=~/.local/share/go
 export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
 export XDG_CACHE_HOME=~/.cache
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export CARGO_HOME=~/.local/share/cargo
+export RUSTUP_HOME=~/.local/share/rustup
+export NUGET_PACKAGES=~/.local/share/Nuget
+export GOPATH=~/.local/share/go
 export XINITRC=~/.config/x11/xinitrc
 
 
@@ -55,6 +57,7 @@ declare -a packages=(
   flameshot
   # Fonts
   ttf-fira-code
+  ttf-firacode-nerd
   noto-fonts-cjk
   noto-fonts-emoji
   noto-fonts-extra
@@ -80,7 +83,6 @@ declare -a packages=(
   # IDE & LSP's
   helix
   vscode-langservers-extracted
-  # TUI's
   # Personal tools
   discord
   brave-bin
@@ -91,6 +93,7 @@ declare -a packages=(
 for i in "${packages[@]}"; do yay -S --noconfirm $i; done
 
 # Install Rust tools
+rustup default stable
 rustup component add rust-analyzer
 cargo install --locked bacon
 cargo install --locked cargo-expand

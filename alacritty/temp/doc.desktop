@@ -1,4 +1,0 @@
-[Desktop Entry]
-Name=Doc
-Type=Application
-Exec=alacritty -e bash -c "helix ./Documents/_Doc/README.md && bash"

@@ -1,5 +1,5 @@
 configuration {
-	font:							"Fantasque Sans Mono 10";
+	font:							"Fantasque Sans Mono 14";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
@@ -12,39 +12,39 @@ configuration {
 
 * {
   al:    #00000000;
-  bg:    #1F1F1FFF;
-  bg1:   #313131FF;
-  bg2:   #3949ABFF;
-  bg3:   #1E88E5FF;
-  bg4:   #2196F3FF;
-  fg:    #FFFFFFFF;
+  bg:    #17181A;
+  bg1:   #17181A;
+  bg2:   #3949AB;
+  bg3:   #1E88E5;
+  bg4:   #2196F3;
+  fg:    #EAEAEA;
 }
 
 window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px;
-	border-color:					@ac;
+	border:							2px;
+	border-color:					#285597;
     border-radius:                  0px;
-	width:							550px;
+	width:							600px;
     location:                       center;
     x-offset:                       0;
-    y-offset:                       0;
+    y-offset:                       -60;
 }
 
 prompt {
     enabled: 						true;
-	padding: 						10px 15px 10px 15px;
+	padding: 						15px 20px 15px 20px;
 	background-color: 				@bg1;
-	text-color: 					#FFFFFF;
+	text-color: 					#EAEAEA;
 	font:							"Iosevka Nerd Font 10";
 }
 
 entry {
     background-color:               @bg1;
-    text-color:                     #FFFFFF;
-    placeholder-color:              #FFFFFF;
+    text-color:                     #EAEAEA;
+    placeholder-color:              #EAEAEA;
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search...";
@@ -55,7 +55,7 @@ entry {
 inputbar {
 	children: 						[ prompt, entry ];
     background-color:               @bg;
-    text-color:                     #FFFFFF;
+    text-color:                     #EAEAEA;
     expand:                         false;
 	border:							0px;
     border-radius:                  0px;
@@ -66,8 +66,8 @@ inputbar {
 listview {
     background-color:               @al;
     padding:                        10px 10px 10px 10px;
-    columns:                        2;
-    lines:                          7;
+    columns:                        1;
+    lines:                          8;
     spacing:                        5px;
     cycle:                          true;
     dynamic:                        true;
@@ -105,7 +105,7 @@ element-text {
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;
-    margin:                         0px 2.5px 0px 2.5px;
+    margin:                         -3.5px 20px 0px 15px;
 }
 
 element selected {
