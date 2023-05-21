@@ -1,5 +1,6 @@
 *
 !alacritty/**
+!applications/**
 !bash/**
 !bottom/**
 !gitui/**
