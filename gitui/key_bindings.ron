@@ -1,0 +1,9 @@
+(
+    move_left: Some(( code: Char('u'), modifiers: ( bits: 0,),)),
+    move_right: Some(( code: Char(';'), modifiers: ( bits: 0,),)),
+    move_up: Some(( code: Char('l'), modifiers: ( bits: 0,),)),
+    move_down: Some(( code: Char('k'), modifiers: ( bits: 0,),)),
+
+    tab_toggle: Some(( code: Char(';'), modifiers: ( bits: 4,),)),
+    tab_toggle_reverse: Some(( code: Char('j'), modifiers: ( bits: 4,),)),
+)

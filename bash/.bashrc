@@ -20,7 +20,7 @@ export PATH=~/.local/share/cargo/bin:$PATH
 # Default Proframs
 export VISUAL=helix
 export EDITOR=helix
-export BROWSER=qutebrowser
+export BROWSER=brave
 
 # XDG https://wiki.archlinux.org/title/XDG_Base_Directory
 export XDG_CONFIG_HOME=~/.config
