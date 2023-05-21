@@ -33,18 +33,26 @@ export CARGO_HOME=~/.local/share/cargo
 export RUSTUP_HOME=~/.local/share/rustup
 export NUGET_PACKAGES=~/.local/share/Nuget
 export GOPATH=~/.local/share/go
-export LS_COLORS='*.md=34:'
+#export LS_COLORS='*.md=34:'
 export LF_COLORS="\
 ~/.cache=90:\
 ~/.config=90:\
+~/.dotnet=90:\
+~/.java=90:\
 ~/.local=90:\
+~/.nuget=90:\
 ~/.pki=90:\
+~/.templateengine=90:\
 ~/.vscode=90:\
+.cargo/=90:\
 .git/=90:\
+.github/=90:\
+.idea/=90:\
+bin/=90:\
+obj/=90:\
 target/=90:\
 .git*=90:\
 *.gitignore=90:\
-*.md=34:\
 "
 
 # Functions
