@@ -7,8 +7,6 @@ PS1='[\u@\h \W]\$ '
 # Aliases
 alias blui='bluetoothctl'
 alias c="clear"
-alias docker='sudo docker'
-alias gi='gitui'
 alias ld='sudo lazydocker'
 alias ls='ls --color=auto -a'
 alias code='code --extensions-dir ~/.cache/VsCode/extensions --user-data-dir ~/.cache/VsCode/UserDataDir'

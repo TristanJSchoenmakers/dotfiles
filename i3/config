@@ -23,7 +23,7 @@ client.unfocused	#181818 #181818 #888888 #292d2e #222222
 workspace "1" output primary
 workspace "2" output primary
 
-assign [class="brave"] 1
+assign [class="Brave"] 1
 
 
 # -----------------
@@ -36,8 +36,10 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg
 # polybar
 exec_always --no-startup-id $HOME/.config/i3/polybar/launch.sh
 
+exec --no-startup-id "mdbook serve ~/Documents/_Doc"
+
 # Start applications on startup
-exec --no-startup-id i3-msg 'workspace 3; exec alacritty -e bash -c "helix ./Documents/_Doc/README.md && bash"'
+exec --no-startup-id i3-msg 'workspace 3; exec alacritty --working-directory ~/Documents/_Doc -e bash -c "helix ./README.md && bash"'
 
 # -----------------
 # Bindings
@@ -63,32 +65,22 @@ bindsym $mod+Shift+s exec "flameshot gui"
 bindsym $mod+q kill
 
 # navigation
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -152,15 +144,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"

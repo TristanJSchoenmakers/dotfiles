@@ -52,23 +52,23 @@ In my hotkey setup I try to use the following logic as much as possible
 
 ##### Movement
 
-- **ControlKey + j** Switch to left application/window/tab
-- **ControlKey + k** Switch to bottom application/window/tab
-- **ControlKey + l** Switch to top application/window/tab
-- **ControlKey + ;** Switch to right application/window/tab
+- **ModifierKey + j** Switch to left application/window/tab
+- **ModifierKey + k** Switch to bottom application/window/tab
+- **ModifierKey + l** Switch to top application/window/tab
+- **ModifierKey + ;** Switch to right application/window/tab
 
 
 ##### Move position focussed application/window/tab
 
-- **ControlKey + shift + j** Move current application/window/tab one left
-- **ControlKey + shift + k** Move current application/window/tab one bottom
-- **ControlKey + shift + l** Move current application/window/tab one top
-- **ControlKey + shift + ;** Move current application/window/tab one right
+- **ModifierKey + shift + j** Move current application/window/tab one left
+- **ModifierKey + shift + k** Move current application/window/tab one bottom
+- **ModifierKey + shift + l** Move current application/window/tab one top
+- **ModifierKey + shift + ;** Move current application/window/tab one right
 
 
 ##### Other
 
-- **ControlKey + o** Open application/window/tab
-- **ControlKey + n** New application/window/tab
-- **ControlKey + q** Close current application/window/tab
+- **ModifierKey + o** Open application/window/tab
+- **ModifierKey + n** New application/window/tab
+- **ModifierKey + q** Close current application/window/tab
 
