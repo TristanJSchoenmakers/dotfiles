@@ -44,6 +44,9 @@ symbol = " "
 [git_branch]
 symbol = " "
 
+[git_status]
+stashed = ''
+
 [golang]
 symbol = " "
 

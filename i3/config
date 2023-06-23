@@ -50,6 +50,7 @@ set $mod Mod4
 # shutdown, restart, reload config
 bindsym $mod+Shift+q exec --no-startup-id systemctl poweroff -i, mode "default"
 bindsym $mod+Shift+r exec --no-startup-id systemctl reboot, mode "default"
+bindsym --release $mod+Shift+d exec --no-startup-id "slock"
 bindsym $mod+Shift+c reload
 
 # start a terminal

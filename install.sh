@@ -55,6 +55,7 @@ declare -a packages=(
   polybar
   ly
   flameshot
+  slock
   # Fonts
   ttf-fira-code
   ttf-firacode-nerd
