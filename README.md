@@ -12,7 +12,7 @@
 | Status Bar | [polybar](https://github.com/jaagr/polybar) | 
 | Launcher | [rofi](https://wiki.archlinux.org/index.php/rofi) | 
 | Terminal      | [alacritty](https://github.com/alacritty/alacritty) | with Bash as shell & [starship](https://starship.rs/) as shell prompt
-| Editor      | [helix](https://github.com/helix-editor/helix) | 
+| Text Editor      | [helix](https://github.com/helix-editor/helix) | 
 | File Manager | [lf](https://github.com/gokcehan/lf) | terminal file manager
 
 
@@ -30,8 +30,10 @@ I recommend using the guided installer 'archinstall'
 
 
 #### 2 - Excecute install script
+<span style="color:red;">WARNING! this will delete your current .config directory and replace it with my dotfiles!</span>
 
 ``` bash
+# Run the following commands in your home directory (~/)
 curl -LO https://raw.githubusercontent.com/TristanJSchoenmakers/dotfiles/main/install.sh
 
 bash install.sh
@@ -52,18 +54,18 @@ In my hotkey setup I try to use the following logic as much as possible
 
 ##### Movement
 
-- **ModifierKey + j** Switch to left application/window/tab
-- **ModifierKey + k** Switch to bottom application/window/tab
-- **ModifierKey + l** Switch to top application/window/tab
-- **ModifierKey + ;** Switch to right application/window/tab
+- **ModifierKey + h** Switch to left application/window/tab
+- **ModifierKey + j** Switch to bottom application/window/tab
+- **ModifierKey + k** Switch to top application/window/tab
+- **ModifierKey + l** Switch to right application/window/tab
 
 
 ##### Move position focussed application/window/tab
 
-- **ModifierKey + shift + j** Move current application/window/tab one left
-- **ModifierKey + shift + k** Move current application/window/tab one bottom
-- **ModifierKey + shift + l** Move current application/window/tab one top
-- **ModifierKey + shift + ;** Move current application/window/tab one right
+- **ModifierKey + shift + h** Move current application/window/tab one left
+- **ModifierKey + shift + j** Move current application/window/tab one bottom
+- **ModifierKey + shift + k** Move current application/window/tab one top
+- **ModifierKey + shift + l** Move current application/window/tab one right
 
 
 ##### Other
