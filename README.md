@@ -30,7 +30,7 @@ I recommend using the guided installer 'archinstall'
 
 
 #### 2 - Excecute install script
-<span style="color:red;">WARNING! this will delete your current .config directory and replace it with my dotfiles!</span>
+<p style="color:red;">WARNING! this will delete your current .config directory and replace it with my dotfiles!</p>
 
 ``` bash
 # Run the following commands in your home directory (~/)
