@@ -84,6 +84,7 @@ declare -a packages=(
   # IDE & LSP's
   helix
   vscode-langservers-extracted
+  marksman
   # Personal tools
   discord
   brave-bin
