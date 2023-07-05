@@ -90,6 +90,7 @@ bindsym $mod+r mode "resize"
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle global
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
