@@ -22,6 +22,14 @@ client.unfocused	#181818 #181818 #888888 #292d2e #222222
 
 workspace "1" output primary
 workspace "2" output primary
+workspace "3" output primary
+workspace "4" output primary
+workspace "5" output primary
+workspace "6" output DisplayPort-1
+workspace "7" output DisplayPort-1
+workspace "8" output DisplayPort-1
+workspace "9" output DisplayPort-1
+workspace "10" output DisplayPort-1
 
 assign [class="Brave"] 1
 
@@ -39,7 +47,7 @@ exec_always --no-startup-id $HOME/.config/i3/polybar/launch.sh
 exec --no-startup-id "mdbook serve ~/Documents/_Doc"
 
 # Start applications on startup
-exec --no-startup-id i3-msg 'workspace 3; exec alacritty --working-directory ~/Documents/_Doc -e bash -c "helix ./README.md && bash"'
+exec --no-startup-id i3-msg 'workspace 2; exec alacritty --working-directory ~/Documents/_Doc -e bash -c "helix ./README.md && bash"'
 
 # -----------------
 # Bindings
