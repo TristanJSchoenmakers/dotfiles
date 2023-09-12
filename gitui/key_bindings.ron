@@ -4,6 +4,10 @@
     move_up: Some(( code: Char('k'), modifiers: ( bits: 0,),)),
     move_down: Some(( code: Char('j'), modifiers: ( bits: 0,),)),
 
-    tab_toggle: Some(( code: Char('h'), modifiers: ( bits: 4,),)),
-    tab_toggle_reverse: Some(( code: Char('l'), modifiers: ( bits: 4,),)),
+    tab_toggle: Some(( code: Char('l'), modifiers: ( bits: 4,),)),
+    tab_toggle_reverse: Some(( code: Char('h'), modifiers: ( bits: 4,),)),
+
+    file_find: Some(( code: Char('/'), modifiers: ( bits: 0,),)),
+    branch_find: Some(( code: Char('/'), modifiers: ( bits: 0,),)),
+    log_find: Some(( code: Char('/'), modifiers: ( bits: 0,),)),
 )
