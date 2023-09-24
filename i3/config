@@ -70,6 +70,9 @@ bindsym $mod+o exec "rofi -no-config -no-lazy-grab -show drun -modi drun -theme 
 # screen shot with flameshot
 bindsym $mod+Shift+s exec "flameshot gui"
 
+# system settings
+bindsym $mod+comma exec "os-settings"
+
 # kill focused window
 bindsym $mod+q kill
 
