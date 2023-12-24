@@ -21,7 +21,7 @@ font:
 # Theme: One Dark
 colors:
   primary:
-    background: '0x20232B'
+    background: '0x1E2129'
     foreground: '0xabb2bf'
     bright_foreground: '0xe6efff'
 
