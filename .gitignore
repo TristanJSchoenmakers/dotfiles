@@ -11,3 +11,5 @@
 !README.md
 !install.sh
 !mimeapps.list
+!home.nix
+!configuration.nix
