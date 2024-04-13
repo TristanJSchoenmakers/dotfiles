@@ -68,6 +68,3 @@ function ya() {
     fi
     rm -f -- "$tmp"
 }
-
-# Start Starship
-eval "$(starship init bash)"
