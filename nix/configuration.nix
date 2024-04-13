@@ -120,7 +120,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # system
-    home-manager
+    # home-manager
     # display
     hyprpaper
     rofi-wayland
@@ -136,6 +136,7 @@
     alacritty
     lf
     helix
+    git
     gitui
     gh
     # programming
@@ -143,6 +144,7 @@
     nil
     # applications
     brave
+    remmina
     qbittorrent-qt5
     mpv-unwrapped
   ];
