@@ -141,6 +141,7 @@
     alacritty
     lf
     bat
+    glow
     helix
     git
     gitui
