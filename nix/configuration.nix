@@ -75,20 +75,7 @@
     layout = "us";
     xkbVariant = "";
   };
-  # services.xserver.displayManager.sddm = {
-  #   enable = true;    
-  #   wayland.enable = true;
-  # };
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
-  networking.firewall.allowedTCPPorts = [ 3389 ];
-  services.gnome.gnome-remote-desktop.enable = true;
-
-  programs.starship.enable = true;
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
@@ -111,7 +98,24 @@
     gnome-calculator gnome-characters gnome-clocks gnome-contacts
     gnome-font-viewer gnome-logs gnome-maps gnome-music
     gnome-weather 
+    # pkgs.gnome-connections
   ]);
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  networking.firewall.allowedTCPPorts = [ 3389 ];
+  services.gnome.gnome-remote-desktop.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
+
+  programs.starship.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.johndoe = {
@@ -154,6 +158,7 @@
     remmina
     qbittorrent-qt5
     mpv-unwrapped
+    discord
   ];
 
   # home-manager = {
