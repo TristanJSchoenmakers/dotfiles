@@ -14,22 +14,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  powerManagement.enable = false;
+
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.networkmanager.enable = true; # Enable networking
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
+  # Set your time zone & internationalisation
   time.timeZone = "Europe/Amsterdam";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "nl_NL.UTF-8";
     LC_IDENTIFICATION = "nl_NL.UTF-8";
@@ -66,12 +58,13 @@
     #media-session.enable = true;
   };
 
+  nixpkgs.config.allowUnfree = true;
 
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  # Configure keymap in X11
   services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    # Configure keymap in X11
     layout = "us";
     xkbVariant = "";
   };
@@ -82,7 +75,7 @@
     gnome-connections
     gnome-console
     gnome-text-editor
-]) ++ (with pkgs.gnome; [
+  ]) ++ (with pkgs.gnome; [
     cheese      # photo booth
     eog         # image viewer
     epiphany    # web browser
@@ -92,13 +85,8 @@
     yelp        # help viewer
     evince      # document viewer
     seahorse    # password manager
-    gnome-terminal
-
-    # these should be self explanatory
-    gnome-calculator gnome-characters gnome-clocks gnome-contacts
-    gnome-font-viewer gnome-logs gnome-maps gnome-music
-    gnome-weather 
-    # pkgs.gnome-connections
+    gnome-terminal gnome-logs gnome-characters gnome-clocks gnome-contacts
+    gnome-font-viewer gnome-calculator gnome-maps gnome-music gnome-weather 
   ]);
 
   programs.hyprland = {
@@ -106,10 +94,9 @@
     xwayland.enable = true;
   };
 
-  networking.firewall.allowedTCPPorts = [ 3389 ];
+  # Enable gnome RDP
   services.gnome.gnome-remote-desktop.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
+  networking.firewall.allowedTCPPorts = [ 3389 ];
 
   programs.starship.enable = true;
   programs.steam = {
@@ -125,8 +112,6 @@
     packages = with pkgs; [];
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     # system
     # home-manager
@@ -180,12 +165,6 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
