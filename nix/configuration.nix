@@ -15,6 +15,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   powerManagement.enable = false;
+  systemd.targets.sleep.enable = false;
+  systemd.targets.suspend.enable = false;
+  systemd.targets.hibernate.enable = false;
+  systemd.targets.hybrid-sleep.enable = false;
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true; # Enable networking
@@ -131,13 +135,18 @@
     lf
     bat
     glow
-    helix
     git
     gitui
     gh
-    # programming
+    # Programming language build tools
+    rustup
+    dotnet-sdk_8
+    # IDE & LSP's
+    helix
     vscode-langservers-extracted
     nil
+    omnisharp-roslyn
+    netcoredbg
     # applications
     brave
     remmina
