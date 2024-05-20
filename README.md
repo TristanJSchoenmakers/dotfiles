@@ -1,7 +1,7 @@
 <div align="center">
   <h1>dotfiles</h1>
   <p>
-    <strong>My personal Arch Linux dotfiles with a post-install script to set things up</strong>
+    <strong>My personal NixOs dotfiles</strong>
   </p>
 
 
@@ -22,24 +22,18 @@
 ## Getting started
 
 
-#### 1 - Install Arch Linux
+#### 1 - Install NisOs
 
-I recommend using the guided installer 'archinstall'
-
-- [archinstall - ArchWiki](https://wiki.archlinux.org/title/Archinstall)
+- [NixOs Download](https://nixos.org/download/)
 
 
-#### 2 - Excecute install script
+#### 2 - Clone git repository to ~/.config
 
 
-<p style="color:red;">WARNING! this will delete your current .config directory and replace it with my dotfiles!</p>
+#### 3 - Create simlink from dotfiles to the NixOS configuration directory
 
-
-``` bash
-# Run the following commands in your home directory (~/)
-curl -LO https://raw.githubusercontent.com/TristanJSchoenmakers/dotfiles/main/install.sh
-
-bash install.sh
+```bash
+sudo ln -s /home/{user}/.config/nixos/configuration.nix /etc/nixos/configuration.nix
 ```
 
 
