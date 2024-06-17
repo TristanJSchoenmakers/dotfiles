@@ -23,6 +23,22 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true; # Enable networking
+  services.cloudflared = {
+    enable = true;
+    tunnels = {
+      "rdp" = {
+        hostname = "rdp.joe.sneleentaxi.nl";
+        # credentialsFile = "${config.users.users.johndoe.home}/.cloudflared/[TUNNEL ID].json";
+        ingress = [
+          {
+            hostname = "rdp.joe.sneleentaxi.nl";
+            service = "rdp://localhost:3390";
+          }
+        ];
+        default = "http_status:404";
+      };
+    };
+  };
 
   # Set your time zone & internationalisation
   time.timeZone = "Europe/Amsterdam";
@@ -99,7 +115,6 @@
     daemon.settings.data-root = "/nix/persist/docker";
   };
   programs.starship.enable = true;
-  # services.pcscd.enable = true;
   programs.gnupg.agent = {
      enable = true;
      pinentryPackage = pkgs.pinentry-gnome3;
