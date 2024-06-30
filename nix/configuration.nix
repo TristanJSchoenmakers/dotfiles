@@ -7,10 +7,12 @@
 let
   secrets = if builtins.pathExists ./secrets.nix
               then import ./secrets.nix
-              else {};
-  environmentConfig = if secrets.environment == "work" then
-           import ./work.nix
-         else {};
+            else {};
+  environmentConfig = if secrets.environment == "work"
+                        then import ./work.nix
+                      else if secrets.environment == "home"
+                        then import ./home.nix
+                      else {};
 in
 {
   imports =
@@ -107,14 +109,10 @@ in
   };
   programs.starship.enable = true;
   programs.gnupg.agent = {
-     enable = true;
-     pinentryPackage = pkgs.pinentry-gnome3;
-     enableSSHSupport = true;
+    enable = true;
+    pinentryPackage = pkgs.pinentry-gnome3;
+    enableSSHSupport = true;
   };
-  #programs.steam = {
-  #  enable = true;
-  #  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-  #};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.johndoe = {
@@ -168,11 +166,10 @@ in
     # applications
     brave
     remmina
-    #qbittorrent-qt5
     keepassxc
     mpv-unwrapped
+    zathura
     slack
-    #discord
   ];
 
   #environment.variables.LD_LIBRARY_PATH = builtins.concatStringsSep ":" [
