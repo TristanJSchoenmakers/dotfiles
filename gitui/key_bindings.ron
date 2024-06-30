@@ -1,13 +1,13 @@
 (
-    move_left: Some(( code: Char('h'), modifiers: ( bits: 0,),)),
-    move_right: Some(( code: Char('l'), modifiers: ( bits: 0,),)),
-    move_up: Some(( code: Char('k'), modifiers: ( bits: 0,),)),
-    move_down: Some(( code: Char('j'), modifiers: ( bits: 0,),)),
+    move_left: Some(( code: Char('h'), modifiers: "")),
+    move_right: Some(( code: Char('l'), modifiers: "")),
+    move_up: Some(( code: Char('k'), modifiers: "")),
+    move_down: Some(( code: Char('j'), modifiers: "")),
 
-    tab_toggle: Some(( code: Char('l'), modifiers: ( bits: 4,),)),
-    tab_toggle_reverse: Some(( code: Char('h'), modifiers: ( bits: 4,),)),
+    tab_toggle: Some(( code: Char('l'), modifiers: "ALT")),
+    tab_toggle_reverse: Some(( code: Char('h'), modifiers: "ALT")),
 
-    file_find: Some(( code: Char('/'), modifiers: ( bits: 0,),)),
-    branch_find: Some(( code: Char('/'), modifiers: ( bits: 0,),)),
-    log_find: Some(( code: Char('/'), modifiers: ( bits: 0,),)),
+    file_find: Some(( code: Char('/'), modifiers: "")),
+    branch_find: Some(( code: Char('/'), modifiers: "")),
+    log_find: Some(( code: Char('/'), modifiers: "")),
 )
