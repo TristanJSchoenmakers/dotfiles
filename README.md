@@ -3,37 +3,24 @@
   <p>
     <strong>My personal NixOs dotfiles</strong>
   </p>
-
-
-| Software | Choice | Note
-| ------------- |:-------------:|-------------|
-| Window Manager | [i3](https://wiki.archlinux.org/title/I3) | 
-| Display Manager | [ly](https://github.com/fairyglade/ly) | 
-| Status Bar | [polybar](https://github.com/jaagr/polybar) | 
-| Launcher | [rofi](https://wiki.archlinux.org/index.php/rofi) | 
-| Terminal      | [alacritty](https://github.com/alacritty/alacritty) | with Bash as shell & [starship](https://starship.rs/) as shell prompt
-| Text Editor      | [helix](https://github.com/helix-editor/helix) | 
-| File Manager | [lf](https://github.com/gokcehan/lf) | terminal file manager
-
-
 </div>
 
 
 ## Getting started
 
 
-#### 1 - Install NisOs
+#### 1 - Install NixOs
 
 - [NixOs Download](https://nixos.org/download/)
 
 
-#### 2 - Clone git repository to ~/.config
-
-
-#### 3 - Create simlink from dotfiles to the NixOS configuration directory
+#### 2 - Excecute install script
 
 ```bash
-sudo ln -s /home/{user}/.config/nix/configuration.nix /etc/nixos/configuration.nix
+nix-shell -p curl
+curl -LO https://raw.githubusercontent.com/TristanJSchoenmakers/dotfiles/main/install.sh
+
+bash install.sh
 ```
 
 
