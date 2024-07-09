@@ -128,7 +128,7 @@ in
     # home-manager
     # display
     hyprpaper
-    hyprcursor
+    # hyprcursor
     hyprshot
       libnotify
       wl-clipboard
