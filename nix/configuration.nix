@@ -101,8 +101,9 @@ in
   };
 
   # Enable gnome RDP
-  services.gnome.gnome-remote-desktop.enable = true;
-  networking.firewall.allowedTCPPorts = [ 3389 ];
+  # services.gnome.gnome-remote-desktop.enable = true;
+  # networking.firewall.allowedTCPPorts = [ 3389 ];
+  networking.firewall.allowedTCPPorts = [ 22 80 443 5900 ];
 
   virtualisation.docker = {
     enable = true;
@@ -134,6 +135,7 @@ in
       wl-clipboard
     wofi
     waybar
+    wayvnc
     fira-code
     fira-code-nerdfont
     noto-fonts
