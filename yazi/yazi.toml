@@ -15,31 +15,31 @@ cache_dir  = ""
 
 [opener]
 folder = [
-	{ exec = 'open -R "$@"', display_name = "Reveal in Finder" },
-	{ exec = '$EDITOR "$@"' },
+	{ run = 'open -R "$@"', display_name = "Reveal in Finder" },
+	{ run = '$EDITOR "$@"' },
 ]
 archive = [
-	{ exec = 'unar "$1"', display_name = "Extract here" },
+	{ run = 'unar "$1"', display_name = "Extract here" },
 ]
 text = [
-	{ exec = '$EDITOR "$@"', block = true },
-	{ exec = 'alacritty -e bash -c "$EDITOR $@"' },
+	{ run = '$EDITOR "$@"', block = true },
+	{ run = 'alacritty -e bash -c "$EDITOR $@"' },
 ]
 image = [
-	{ exec = 'brave "$@"', display_name = "Open in browser" },
-	{ exec = 'open "$@"', display_name = "Open" },
+	{ run = 'brave "$@"', display_name = "Open in browser" },
+	{ run = 'open "$@"', display_name = "Open" },
 ]
 video = [
-	{ exec = 'mpv "$@"' },
-	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
+	{ run = 'mpv "$@"' },
+	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
 ]
 audio = [
-	{ exec = 'mpv "$@"', block = true, display_name = "open in mpv" },
-	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
+	{ run = 'mpv "$@"', block = true, display_name = "open in mpv" },
+	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
 ]
 fallback = [
-	{ exec = 'open "$@"', display_name = "Open" },
-	{ exec = 'open -R "$@"', display_name = "Reveal in Finder" },
+	{ run = 'open "$@"', display_name = "Open" },
+	{ run = 'open -R "$@"', display_name = "Reveal in Finder" },
 ]
 
 [open]
