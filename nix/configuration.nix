@@ -54,6 +54,7 @@ in
     dates = "daily";
     options = "--delete-older-than 3d";
   };
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -94,7 +95,7 @@ in
     gnome-font-viewer gnome-calculator gnome-maps gnome-music gnome-weather 
   ]);
 
-  environment.variables.MY_ENVIRONMENT = secrets.environment;
+  environment.sessionVariables.MYENV = secrets.environment;
   programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
@@ -142,7 +143,6 @@ in
     noto-fonts
     # terminal
     alacritty
-    lf
     yazi
     bat
     glow
@@ -158,10 +158,6 @@ in
     dotnet-sdk_8
     dotnet-aspnetcore_8
     nodejs_20
-    # docker
-    #xorg.libX11
-    #xorg.libXi
-    #libGL
     # IDE & LSP's
     helix
     jetbrains.rider
