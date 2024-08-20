@@ -163,7 +163,7 @@ in
     jetbrains.rider
     vscode-langservers-extracted
     nil
-    marksman
+    markdown-oxide
     # applications
     brave
     remmina
