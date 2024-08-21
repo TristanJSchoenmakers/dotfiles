@@ -72,10 +72,13 @@ in
     enable = true;
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
+    excludePackages = [ pkgs.xterm ];
     xkb.variant = "";
     xkb.layout = "";
   };
 
+  documentation.nixos.enable = false;
+  programs.geary.enable = false;
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
