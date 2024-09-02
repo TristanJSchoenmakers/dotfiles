@@ -155,6 +155,7 @@ in
     gitui
     gh
     lazydocker
+    drill
     kubectl
     doctl
     openlens
@@ -168,6 +169,7 @@ in
     helix
     jetbrains.rider
     vscode-langservers-extracted
+    clang-tools
     nil
     markdown-oxide
     # applications
