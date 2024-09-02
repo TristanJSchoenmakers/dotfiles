@@ -73,6 +73,7 @@
 "markup.heading.1" = { fg = "red", modifiers = ["bold"] }
 "markup.heading.2" = { fg = "dark-blue", modifiers = ["bold"] }
 "markup.raw.inline" = { fg = "green" }
+# "markup.raw.block" = { bg = "#23262e" }
 "markup.bold" = { fg = "gold", modifiers = ["bold"] }
 "markup.italic" = { fg = "purple", modifiers = ["italic"] }
 "markup.list" = { fg = "dark-blue" }
