@@ -18,7 +18,6 @@
   "modules-right": [
     "custom/bluetooth-gui",
     "pulseaudio",
-    // "keyboard-state",
     "clock"
     // "tray"
   ],
@@ -48,27 +47,17 @@
     "max-length": 12,
     "tooltip": false
   },
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    }
-  },
   "tray": {
     // "icon-size": 21,
     "spacing": 10
   },
   "clock": {
-    // "timezone": "America/New_York",
     "format": "{:%H:%M %d-%m-%Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
   "custom/bluetooth-gui": {
-    "format": "Bluetooth",
+    "format": "",
     "on-click": "overskride"
   },
   "pulseaudio": {
