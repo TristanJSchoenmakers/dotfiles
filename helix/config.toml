@@ -9,6 +9,7 @@ color-modes = true
 completion-trigger-len = 1      # min-lenght to start auto-completion
 
 [keys.normal]
+"C-r"  = ":reload"
 "G"    = "goto_file_end"
 "o"    = "file_picker"
 "O"    = "file_picker_in_current_directory"
