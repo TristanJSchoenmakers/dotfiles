@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib, ... }:
 
 let
   secrets = if builtins.pathExists ./secrets.nix
@@ -180,6 +180,7 @@ in
     mpv-unwrapped
     zathura
     slack
+    (pkgs.callPackage ../../Documents/hoihoi/package.nix {})
   ];
 
   #environment.variables.LD_LIBRARY_PATH = builtins.concatStringsSep ":" [
