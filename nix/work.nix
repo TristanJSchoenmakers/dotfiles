@@ -8,11 +8,16 @@ in
 {
   environment.systemPackages = with pkgs; [
     android-studio
-    android-tools
     zulu17
   ];
 
   programs.nix-ld.enable = true;
+
+  environment.sessionVariables.ANDROID_HOME = "$HOME/Android/Sdk";
+  programs.adb.enable = true;
+  # abusers to access adb
+  # kvm for hardware acceleration bug: https://nixos.wiki/wiki/Android#hardware_acceleration
+  users.users.johndoe.extraGroups = ["adbusers" "kvm"];
   
   users.users.cloudflared = {
     group = "cloudflared";
