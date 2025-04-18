@@ -9,6 +9,13 @@ color-modes = true
 completion-trigger-len = 1      # min-lenght to start auto-completion
 end-of-line-diagnostics = "hint"
 
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'<' = '>'
+
 [editor.inline-diagnostics]
 cursor-line = "warning" # show warnings and errors on the cursorline inline
 
