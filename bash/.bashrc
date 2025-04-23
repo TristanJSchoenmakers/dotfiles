@@ -31,6 +31,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export CARGO_HOME=~/.local/share/cargo
 export RUSTUP_HOME=~/.local/share/rustup
 export NUGET_PACKAGES=~/.local/share/Nuget
+export GNUPGHOME=~/.local/share/gnupg
 export GOPATH=~/.local/share/go
 #export LS_COLORS='*.md=34:'
 export LF_COLORS="\
