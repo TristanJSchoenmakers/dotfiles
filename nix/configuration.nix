@@ -13,6 +13,12 @@ let
                       else if secrets.environment == "home"
                         then import ./home.nix
                       else {};
+  rotateWallpaper = pkgs.writeShellScriptBin "rotate-wallpaper" ''
+      #!/usr/bin/env bash
+      WALLPAPER=$(find "$HOME/.config/hypr" -maxdepth 1 -type f -iname "*.jpeg" | shuf -n 1)
+      /run/current-system/sw/bin/hyprctl hyprpaper preload "$WALLPAPER"
+      /run/current-system/sw/bin/hyprctl hyprpaper wallpaper ",$WALLPAPER"
+  '';
 in
 {
   imports =
@@ -87,6 +93,7 @@ in
   environment.gnome.excludePackages = (with pkgs; [
     epiphany
     evince
+    gnome-calculator
     gnome-calendar
     gnome-characters
     gnome-clocks
@@ -104,6 +111,7 @@ in
     loupe
     seahorse
     simple-scan
+    snapshot
     totem
     geary
   ]);
@@ -131,12 +139,14 @@ in
   environment.systemPackages = with pkgs; [
     # display
     hyprpaper
+    rotateWallpaper
     hyprshot
       libnotify
       wl-clipboard
     wofi
     waybar
     overskride
+    blueman
     wayvnc
     fira-code
     fira-code-nerdfont
@@ -157,15 +167,18 @@ in
     cargo-nextest
     gcc
     mdbook
+    openssl
     # IDE & LSP's
     helix
     vscode-langservers-extracted
+    taplo
     clang-tools
     nil
     dprint
     markdown-oxide
     # applications
     brave
+    #servo
     remmina
     keepassxc
     mpv-unwrapped
@@ -225,32 +238,21 @@ in
 
   # List services that you want to enable
   systemd.user.services.hyprpaper-rotate = {
-    description = "Rotate Hyprpaper wallpaper";
+    description = "Rotate Hyprpaper wallpaper once";
     serviceConfig = {
-      Type = "oneshot";
-      ExecStart = ''
-        #!/usr/bin/env bash
-
-        # Pick a random wallpaper
-        WALLPAPER=$(find "$HOME/.config/hypr" -maxdepth 1 -type f -iname "*.jpeg" | shuf -n 1)
-        
-        # Set wallpaper as background
-        hyprctl hyprpaper preload "$WALLPAPER"
-        hyprctl hyprpaper wallpaper ",$WALLPAPER"
-      '';
+      Type       = "oneshot";
+      ExecStart  = "${rotateWallpaper}/bin/rotate-wallpaper";
+      # If you only want this after your graphical session is up:
+      # After     = "graphical-session.target";
     };
   };
   systemd.user.timers.hyprpaper-rotate = {
-    description = "Rotate Hyprpaper wallpaper periodically";
-    wants = [ "timers.target" ];
-    partOf = [ "timers.target" ];
-    timerConfig = {
-      OnCalendar = "*:0/1"; # every 30 minutes
-      Persistent = true;
-      Unit = "hyprpaper-rotate.service";
-    };
+    description = "Run hyprpaper-rotate every 30 minutes";
     wantedBy = [ "timers.target" ];
-    # unit = "hyprpaper-rotate.service";
+    timerConfig = {
+      OnUnitActiveSec = "30min";
+      Persistent      = true;
+    };
   };
 
   # Enable the OpenSSH daemon.
