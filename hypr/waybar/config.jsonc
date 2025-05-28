@@ -58,7 +58,7 @@
   },
   "custom/bluetooth-gui": {
     "format": "",
-    "on-click": "overskride"
+    "on-click": "blueman-manager"
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
