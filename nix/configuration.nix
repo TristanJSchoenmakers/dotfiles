@@ -133,15 +133,23 @@ in
     enableSSHSupport = true;
   };
 
-  environment.systemPackages = with pkgs; [
+  programs.firefox = {
+    enable = true;
+  };
+
     # terminal, CLI & TUI's
-    wayvnc
+  environment.systemPackages = with pkgs; [
+    # Terminal
     alacritty
-    yazi
     ueberzugpp
+    # CLI's
+    ripgrep
     git
     pinentry-curses
     cloudflared
+    wayvnc
+    # TUI's
+    yazi
     gitui
     gh
     lazydocker
@@ -152,10 +160,10 @@ in
     gcc
     mdbook
     openssl
+    pkg-config
     # IDE & LSP's
     helix
     vscode-langservers-extracted
-    taplo
     clang-tools
     nil
     dprint
@@ -167,6 +175,10 @@ in
     mpv-unwrapped
     zathura
   ];
+
+  environment.variables = {
+    PKG_CONFIG_PATH="${pkgs.openssl.dev}/lib/pkgconfig";
+  };
 
   environment.etc."hosts".text = lib.mkForce ''
     127.0.0.1 localhost

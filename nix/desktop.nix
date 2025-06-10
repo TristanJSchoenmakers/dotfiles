@@ -59,6 +59,7 @@
       wl-clipboard
     wofi
     waybar
+    eww
     blueman
   ];
 }
