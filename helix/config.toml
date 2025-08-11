@@ -8,6 +8,7 @@ bufferline = "multiple"
 color-modes = true
 completion-trigger-len = 1      # min-lenght to start auto-completion
 end-of-line-diagnostics = "hint"
+line-number = "relative"
 
 [editor.auto-pairs]
 '(' = ')'
