@@ -89,7 +89,7 @@ in
     CARGO_HOME      = "$HOME/.local/share/cargo";
     RUSTUP_HOME     = "$HOME/.local/share/rustup";
     NUGET_PACKAGES  = "$HOME/.local/share/Nuget";
-    GNUPGHOME       = "$HOME/.local/share/gnupg";
+    # GNUPGHOME       = "$HOME/.local/share/gnupg";
     GOPATH          = "$HOME/.local/share/go";
   };
 
