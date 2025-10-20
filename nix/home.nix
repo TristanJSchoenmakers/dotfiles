@@ -6,7 +6,8 @@ let
               else {};
 in
 {
-  # environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
+    tigervnc
   #   discord
-  # ];
+  ];
 }

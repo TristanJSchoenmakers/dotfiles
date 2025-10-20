@@ -6,6 +6,6 @@
 command = "mdpls"
 config = { markdown.preview.auto = true, markdown.preview.browser = "brave", markdown.preview.codeTheme = "atom-one-dark" }
 
-[[language]]
-name = "markdown"
-language-servers = [ "mdpls-lsp" ]
+# [[language]]
+# name = "markdown"
+# language-servers = [ "mdpls-lsp" ]
