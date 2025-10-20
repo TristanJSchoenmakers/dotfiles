@@ -81,8 +81,7 @@ window#waybar {
 }
 
 #clock {
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  padding: 4px 14px;
+  padding: 4px 8px;
   border-bottom-left-radius: 15px;
   color: white;
 }
@@ -143,7 +142,17 @@ label:focus {
   background-color: #f53c3c;
 }
 
+
+#custom-bluetooth-gui {
+  padding: 4px 8px;
+}
+
+#custom-bluetooth-gui:hover {
+  background-color: #32a1ce;
+}
+
 #pulseaudio {
+  padding-left: 8px;
   background-color: #000000;
   color: #ffffff;
 }
