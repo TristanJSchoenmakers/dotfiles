@@ -16,7 +16,7 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
-    // "pulseaudio",
+    "pulseaudio",
     // "keyboard-state",
     "clock"
     // "tray"
