@@ -2,28 +2,21 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 let
-  secrets = if builtins.pathExists ./secrets.nix
-              then import ./secrets.nix
-            else {};
+  secrets = if builtins.pathExists ./secrets.nix then import ./secrets.nix else {};
   environmentConfig = if secrets.environment == "work"
                         then import ./work.nix
                       else if secrets.environment == "home"
                         then import ./home.nix
                       else {};
-  rotateWallpaper = pkgs.writeShellScriptBin "rotate-wallpaper" ''
-      #!/usr/bin/env bash
-      WALLPAPER=$(find "$HOME/.config/hypr" -maxdepth 1 -type f -iname "*.jpeg" | shuf -n 1)
-      /run/current-system/sw/bin/hyprctl hyprpaper preload "$WALLPAPER"
-      /run/current-system/sw/bin/hyprctl hyprpaper wallpaper ",$WALLPAPER"
-  '';
 in
 {
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
+      ./desktop.nix
       environmentConfig
     ];
 
@@ -77,43 +70,8 @@ in
     isNormalUser = true;
     description = "johndoe";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = [];
   };
-
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-    excludePackages = [ pkgs.xterm ];
-    xkb.variant = "";
-    xkb.layout = "";
-  };
-
-  environment.gnome.excludePackages = (with pkgs; [
-    epiphany
-    evince
-    gnome-calculator
-    gnome-calendar
-    gnome-characters
-    gnome-clocks
-    gnome-color-manager
-    gnome-connections
-    gnome-console
-    gnome-contacts
-    gnome-font-viewer
-    gnome-maps
-    gnome-music
-    gnome-photos
-    gnome-text-editor
-    gnome-tour
-    gnome-weather
-    loupe
-    seahorse
-    simple-scan
-    snapshot
-    totem
-    geary
-  ]);
 
   environment.sessionVariables = {
     MYENV           = secrets.environment;
@@ -131,7 +89,7 @@ in
     CARGO_HOME      = "$HOME/.local/share/cargo";
     RUSTUP_HOME     = "$HOME/.local/share/rustup";
     NUGET_PACKAGES  = "$HOME/.local/share/Nuget";
-    # GNUPGHOME       = "$HOME/.local/share/gnupg";
+    GNUPGHOME       = "$HOME/.local/share/gnupg";
     GOPATH          = "$HOME/.local/share/go";
   };
 
@@ -160,12 +118,6 @@ in
     }
   '';
 
-  programs.hyprlock.enable = true;
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
   networking.firewall.allowedTCPPorts = [ 22 80 443 5900 ];
 
   virtualisation.docker = {
@@ -181,23 +133,8 @@ in
     enableSSHSupport = true;
   };
 
-
-  fonts.packages = with pkgs; [
-    fira-code
-    nerd-fonts.fira-code
-    noto-fonts
-  ];
-
   environment.systemPackages = with pkgs; [
-    # display
-    hyprpaper
-    rotateWallpaper
-    hyprshot
-      libnotify
-      wl-clipboard
-    wofi
-    waybar
-    blueman
+    # terminal, CLI & TUI's
     wayvnc
     alacritty
     yazi
@@ -224,6 +161,7 @@ in
     dprint
     markdown-oxide
     # applications
+    nextdns
     brave
     keepassxc
     mpv-unwrapped
@@ -273,33 +211,14 @@ in
     127.0.0.1       www.msnbc.com
   '';
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable
-  systemd.user.services.hyprpaper-rotate = {
-    description = "Rotate Hyprpaper wallpaper once";
-    serviceConfig = {
-      Type       = "oneshot";
-      ExecStart  = "${rotateWallpaper}/bin/rotate-wallpaper";
-      # If you only want this after your graphical session is up:
-      # After     = "graphical-session.target";
-    };
+  networking.nameservers = [ "127.0.0.1" "::1" ];
+  networking.networkmanager.dns = "none";
+  services.resolved.enable = false;
+  services.nextdns = {
+    enable = true;
+    arguments = [  "-config" secrets.nextDnsId "-cache-size" "10MB" ];
   };
-  systemd.user.timers.hyprpaper-rotate = {
-    description = "Run hyprpaper-rotate every 30 minutes";
-    wantedBy = [ "timers.target" ];
-    timerConfig = {
-      OnUnitActiveSec = "30min";
-      Persistent      = true;
-    };
-  };
-
+      
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 

@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   secrets = if builtins.pathExists ./secrets.nix
