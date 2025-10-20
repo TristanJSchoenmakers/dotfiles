@@ -1,13 +1,12 @@
 *
 !alacritty/**
-!temp/**
 !bash/**
 !bottom/**
 !gitui/**
 !helix/**
 !i3/**
 !lf/**
-!polybar/**
+!yazi/**
 !starship/**
 !README.md
 !install.sh
