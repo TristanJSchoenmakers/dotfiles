@@ -141,7 +141,7 @@ in
     fira-code
     fira-code-nerdfont
     noto-fonts
-    # terminal
+    # terminal, CLI & TUI's
     alacritty
     yazi
     bat
@@ -152,6 +152,9 @@ in
     gitui
     gh
     lazydocker
+    kubectl
+    doctl
+    openlens
     # Programming language build tools
     rustup
     gcc
