@@ -2,6 +2,15 @@
 # [[language]]
 # name = "c-sharp"
 # language-server = { command = "omnisharp", args = [ "--languageserver" ] }
+
+#[[language]]
+#name = "markdown"
+#formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+
+[language-server.mdpls-lsp]
+command = "mdpls"
+config = { markdown.preview.auto = true, markdown.preview.browser = "brave", markdown.preview.codeTheme = "atom-one-dark" }
+
 [[language]]
 name = "markdown"
-formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+language-servers = [ "mdpls-lsp" ]
