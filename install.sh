@@ -71,10 +71,12 @@ declare -a packages=(
   bat
   glow
   lf
+  yazi
   gitui
   bottom
   lazydocker
   # File viewers
+  ueberzugpp
   sxiv
   zathura
   zathura-pdf-mupdf
