@@ -1,16 +1,16 @@
 // -*- mode: jsonc -*-
 // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
 {
-  // "layer": "top", // Waybar at top layer
+  // "layer": "bottom", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   "height": 30, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": [
-    "hyprland/window"
-    // "custom/media"
-  ],
+  // "modules-left": [
+  //   "hyprland/window"
+  //   // "custom/media"
+  // ],
   "modules-center": [
     "hyprland/submap",
     "hyprland/workspaces"
@@ -62,6 +62,7 @@
   },
   "clock": {
     // "timezone": "America/New_York",
+    "format": "{:%H:%M %d-%m-%Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
