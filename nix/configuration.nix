@@ -75,12 +75,6 @@ in
     packages = with pkgs; [];
   };
 
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-sdk-7.0.410"
-    "dotnet-sdk-wrapped-7.0.410"
-  ];
-
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
@@ -111,6 +105,7 @@ in
     seahorse
     simple-scan
     totem
+    geary
   ]);
 
   environment.sessionVariables.MYENV = secrets.environment;
@@ -120,9 +115,6 @@ in
     xwayland.enable = true;
   };
 
-  # Enable gnome RDP
-  # services.gnome.gnome-remote-desktop.enable = true;
-  # networking.firewall.allowedTCPPorts = [ 3389 ];
   networking.firewall.allowedTCPPorts = [ 22 80 443 5900 ];
 
   virtualisation.docker = {
@@ -160,24 +152,13 @@ in
     gh
     lazydocker
     drill
-    kubectl
-    doctl
-    lens
     # Build tools
     rustup
+    cargo-nextest
     gcc
-    (with dotnetCorePackages; combinePackages [
-      sdk_8_0
-      sdk_9_0
-    ])
-    dotnet-aspnetcore_8
-    dotnet-aspnetcore_9
-    azure-functions-core-tools
-    nodejs_20
     mdbook
     # IDE & LSP's
     helix
-    jetbrains.rider
     vscode-langservers-extracted
     clang-tools
     nil
@@ -189,7 +170,6 @@ in
     keepassxc
     mpv-unwrapped
     zathura
-    slack
   ];
 
   environment.etc."hosts".text = lib.mkForce ''

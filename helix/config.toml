@@ -3,7 +3,7 @@
 theme = "mydark"
 
 [editor]
-mouse = false
+# mouse = false
 bufferline = "multiple"
 color-modes = true
 completion-trigger-len = 1      # min-lenght to start auto-completion

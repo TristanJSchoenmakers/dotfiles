@@ -7,11 +7,33 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    android-studio
+    # terminal, CLI & TUI's
+    kubectl
+    doctl
+    lens
+    # Build tools
+    (with dotnetCorePackages; combinePackages [
+      sdk_8_0
+      sdk_9_0
+    ])
+    dotnet-aspnetcore_8
+    dotnet-aspnetcore_9
+    azure-functions-core-tools
+    nodejs_20
     zulu17
+    # IDE & LSP's
+    jetbrains.rider
+    android-studio
+    # applications
+    slack
   ];
 
   programs.nix-ld.enable = true;
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-sdk-7.0.410"
+    "dotnet-sdk-wrapped-7.0.410"
+  ];
 
   environment.sessionVariables.ANDROID_HOME = "$HOME/Android/Sdk";
   programs.adb.enable = true;
