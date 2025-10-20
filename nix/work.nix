@@ -20,6 +20,7 @@ in
     dotnet-aspnetcore_9
     azure-functions-core-tools
     nodejs_20
+    yarn
     zulu17
     # IDE & LSP's
     jetbrains.rider
