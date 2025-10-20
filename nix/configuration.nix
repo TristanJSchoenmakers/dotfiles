@@ -94,6 +94,7 @@ in
     gnome-font-viewer gnome-calculator gnome-maps gnome-music gnome-weather 
   ]);
 
+  programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -126,16 +127,16 @@ in
     # system
     # home-manager
     # display
-    #hyprpaper
-    #rofi-wayland
+    hyprpaper
+    hyprcursor
+    hyprshot
+      libnotify
+      wl-clipboard
+    wofi
+    waybar
     fira-code
     fira-code-nerdfont
     noto-fonts
-    # bar
-    #eww-wayland
-    #socat
-    #jq
-    #python3
     # terminal
     alacritty
     lf
