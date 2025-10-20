@@ -64,7 +64,6 @@ in
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -182,6 +181,13 @@ in
     enableSSHSupport = true;
   };
 
+
+  fonts.packages = with pkgs; [
+    fira-code
+    nerd-fonts.fira-code
+    noto-fonts
+  ];
+
   environment.systemPackages = with pkgs; [
     # display
     hyprpaper
@@ -191,12 +197,11 @@ in
       wl-clipboard
     wofi
     waybar
-    overskride
     blueman
     wayvnc
-    fira-code
-    fira-code-nerdfont
-    noto-fonts
+    #fira-code
+    #nerd-fonts.fira-code
+    #noto-fonts
     # terminal, CLI & TUI's
     alacritty
     yazi
@@ -310,5 +315,5 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }
