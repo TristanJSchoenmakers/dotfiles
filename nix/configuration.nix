@@ -80,17 +80,22 @@
   #   wayland.enable = true;
   # };
 
-  # programs.hyprland = {
-  #   enable = true;
-  #   xwayland.enable = true;
-  # };
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  networking.firewall.allowedTCPPorts = [ 3389 ];
+  services.gnome.gnome-remote-desktop.enable = true;
 
   programs.starship.enable = true;
-  # programs.git.enable = true;
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
-  ]) ++ (with pkgs.gnome; [
+    gnome-connections
+    gnome-console
+    gnome-text-editor
+]) ++ (with pkgs.gnome; [
     cheese      # photo booth
     eog         # image viewer
     epiphany    # web browser
@@ -105,7 +110,7 @@
     # these should be self explanatory
     gnome-calculator gnome-characters gnome-clocks gnome-contacts
     gnome-font-viewer gnome-logs gnome-maps gnome-music
-    gnome-weather pkgs.gnome-connections
+    gnome-weather 
   ]);
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -135,6 +140,7 @@
     # terminal
     alacritty
     lf
+    bat
     helix
     git
     gitui
