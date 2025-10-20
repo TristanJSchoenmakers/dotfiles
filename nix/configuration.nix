@@ -93,6 +93,11 @@ in
     NUGET_PACKAGES  = "$HOME/.local/share/Nuget";
     GNUPGHOME       = "$HOME/.local/share/gnupg";
     GOPATH          = "$HOME/.local/share/go";
+    GRADLE_USER_HOME= "$XDG_DATA_HOME/gradle";
+    DOCKER_CONFIG   = "$XDG_CONFIG_HOME/docker";
+    KUBECONFIG      = "$XDG_CONFIG_HOME/kube";
+    KUBECACHEDIR    = "$XDG_CACHE_HOME/kube";
+    MACHINE_STORAGE_PATH = "$XDG_DATA_HOME/docker-machine";
   };
 
   programs.bash.shellAliases = {
