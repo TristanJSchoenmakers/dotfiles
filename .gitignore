@@ -8,8 +8,8 @@
 !lf/**
 !yazi/**
 !starship/**
+!nix/**
 !README.md
 !install.sh
 !mimeapps.list
 !home.nix
-!configuration.nix
