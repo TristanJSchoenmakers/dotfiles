@@ -94,6 +94,7 @@ in
     gnome-font-viewer gnome-calculator gnome-maps gnome-music gnome-weather 
   ]);
 
+  environment.variables.MY_ENVIRONMENT = secrets.environment;
   programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
