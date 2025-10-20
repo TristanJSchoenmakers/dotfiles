@@ -4,11 +4,19 @@
 
 { inputs, config, pkgs, ... }:
 
+let
+  secrets = if builtins.pathExists ./secrets.nix
+              then import ./secrets.nix
+              else {};
+  environmentConfig = if secrets.environment == "work" then
+           import ./work.nix
+         else {};
+in
 {
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
-      # ./home-manager.nix
+      environmentConfig
     ];
 
   # Bootloader.
@@ -23,22 +31,6 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true; # Enable networking
-  services.cloudflared = {
-    enable = true;
-    tunnels = {
-      "rdp" = {
-        hostname = "rdp.joe.sneleentaxi.nl";
-        # credentialsFile = "${config.users.users.johndoe.home}/.cloudflared/[TUNNEL ID].json";
-        ingress = [
-          {
-            hostname = "rdp.joe.sneleentaxi.nl";
-            service = "rdp://localhost:3390";
-          }
-        ];
-        default = "http_status:404";
-      };
-    };
-  };
 
   # Set your time zone & internationalisation
   time.timeZone = "Europe/Amsterdam";
@@ -111,7 +103,6 @@
 
   virtualisation.docker = {
     enable = true;
-    enableOnBoot = true;
     daemon.settings.data-root = "/nix/persist/docker";
   };
   programs.starship.enable = true;
@@ -155,6 +146,7 @@
     glow
     git
     pinentry-curses
+    cloudflared
     gitui
     gh
     lazydocker
