@@ -140,6 +140,7 @@ in
       wl-clipboard
     wofi
     waybar
+    overskride
     wayvnc
     fira-code
     fira-code-nerdfont

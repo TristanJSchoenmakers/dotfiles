@@ -1,7 +1,8 @@
 # My version of the onedark theme from: https://github.com/helix-editor/helix/blob/master/runtime/themes/onedark.toml
 
 # Theme - UI
-"ui.background" = { bg = "#1E2129" }
+# "ui.background" = { bg = "#1E2129" }
+"ui.background" = { bg = "#18191b" }
 "ui.virtual" = { fg = "faint-gray" }
 "ui.virtual.indent-guide" = { fg = "faint-gray" }
 "ui.virtual.whitespace" = { fg = "light-gray" }
@@ -93,10 +94,11 @@ diagnostic = { modifiers = ["underlined"] }
 
 
 [palette]
-white = "#DCDCDC" # white for code
+# white = "#DCDCDC" # white for code
+white = "#D2D4D5" # white for code
 greywhite = "#ABB2BF" # darker white for UI elements 
 gray = "#3E4452"
-light-black = "#2C323C"
+light-black = "#212125"
 faint-gray = "#3B4048"
 light-gray = "#5C6370"
 
