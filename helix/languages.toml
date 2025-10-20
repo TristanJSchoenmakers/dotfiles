@@ -1,3 +1,4 @@
-[[language]]
-name = "c-sharp"
-language-server = { command = "omnisharp", args = [ "--languageserver" ] }
+# TODO: this broke after new helix version
+# [[language]]
+# name = "c-sharp"
+# language-server = { command = "omnisharp", args = [ "--languageserver" ] }
