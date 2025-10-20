@@ -4,11 +4,21 @@
 
 { inputs, config, pkgs, ... }:
 
+let
+  secrets = if builtins.pathExists ./secrets.nix
+              then import ./secrets.nix
+            else {};
+  environmentConfig = if secrets.environment == "work"
+                        then import ./work.nix
+                      else if secrets.environment == "home"
+                        then import ./home.nix
+                      else {};
+in
 {
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
-      # ./home-manager.nix
+      environmentConfig
     ];
 
   # Bootloader.
@@ -39,7 +49,6 @@
     LC_TIME = "nl_NL.UTF-8";
   };
 
-  # nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.gc = {
     automatic = true;
     dates = "daily";
@@ -47,7 +56,6 @@
   };
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -55,12 +63,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -69,9 +71,8 @@
     enable = true;
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-    # Configure keymap in X11
-    layout = "us";
-    xkbVariant = "";
+    xkb.variant = "";
+    xkb.layout = "";
   };
 
   environment.gnome.excludePackages = (with pkgs; [
@@ -84,7 +85,6 @@
     cheese      # photo booth
     eog         # image viewer
     epiphany    # web browser
-    gedit       # text editor
     simple-scan # document scanner
     totem       # video player
     yelp        # help viewer
@@ -103,10 +103,15 @@
   services.gnome.gnome-remote-desktop.enable = true;
   networking.firewall.allowedTCPPorts = [ 3389 ];
 
-  programs.starship.enable = true;
-  programs.steam = {
+  virtualisation.docker = {
     enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    daemon.settings.data-root = "/nix/persist/docker";
+  };
+  programs.starship.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-gnome3;
+    enableSSHSupport = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -121,16 +126,16 @@
     # system
     # home-manager
     # display
-    hyprpaper
-    rofi-wayland
+    #hyprpaper
+    #rofi-wayland
     fira-code
     fira-code-nerdfont
     noto-fonts
     # bar
-    eww-wayland
-    socat
-    jq
-    python3
+    #eww-wayland
+    #socat
+    #jq
+    #python3
     # terminal
     alacritty
     lf
@@ -138,45 +143,40 @@
     bat
     glow
     git
+    pinentry-curses
+    cloudflared
     gitui
     gh
+    lazydocker
     # Programming language build tools
     rustup
     gcc
     dotnet-sdk_8
     dotnet-aspnetcore_8
-    docker
-    xorg.libX11
-    xorg.libXi
-    libGL
+    nodejs_20
+    # docker
+    #xorg.libX11
+    #xorg.libXi
+    #libGL
     # IDE & LSP's
     helix
     jetbrains.rider
     vscode-langservers-extracted
     nil
-    omnisharp-roslyn
-    netcoredbg
     # applications
     brave
     remmina
-    qbittorrent-qt5
     keepassxc
     mpv-unwrapped
-    discord
+    zathura
+    slack
   ];
 
-  environment.variables.LD_LIBRARY_PATH = builtins.concatStringsSep ":" [
-    "${pkgs.xorg.libX11}/lib"
-    "${pkgs.xorg.libXi}/lib"
-    "${pkgs.libGL}/lib"
-  ];
-
-  # home-manager = {
-    # extraSpecialArgs = { inherit inputs; };
-    # users = {
-      # janedoe = import ./home.nix;
-    # };
-  # };
+  #environment.variables.LD_LIBRARY_PATH = builtins.concatStringsSep ":" [
+  #  "${pkgs.xorg.libX11}/lib"
+  #  "${pkgs.xorg.libXi}/lib"
+  #  "${pkgs.libGL}/lib"
+  #];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -197,6 +197,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
-
+  system.stateVersion = "24.05"; # Did you read the comment?
 }
