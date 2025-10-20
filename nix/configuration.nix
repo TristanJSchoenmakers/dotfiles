@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
       # ./home-manager.nix
     ];
 
@@ -145,6 +145,7 @@
     gcc
     dotnet-sdk_8
     dotnet-aspnetcore_8
+    docker
     xorg.libX11
     xorg.libXi
     libGL
