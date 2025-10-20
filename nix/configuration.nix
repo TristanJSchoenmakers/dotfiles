@@ -116,7 +116,52 @@ in
     geary
   ]);
 
-  environment.sessionVariables.MYENV = secrets.environment;
+  environment.sessionVariables = {
+    MYENV           = secrets.environment;
+    PATH            = [
+      "~/.local/share/cargo/bin"
+    ];
+    # Default Programs
+    VISUAL          = "hx";
+    EDITOR          = "hx";
+    BROWSER         = "brave";
+    # XDG Base Directory https://wiki.archlinux.org/title/XDG_Base_Directory#Supported
+    XDG_CONFIG_HOME = "$HOME/.config";
+    XDG_DATA_HOME   = "$HOME/.local/share";
+    XDG_CACHE_HOME  = "$HOME/.cache";
+    STARSHIP_CONFIG = "~/.config/starship/starship.toml";
+    CARGO_HOME      = "~/.local/share/cargo";
+    RUSTUP_HOME     = "~/.local/share/rustup";
+    NUGET_PACKAGES  = "~/.local/share/Nuget";
+    GNUPGHOME       = "~/.local/share/gnupg";
+    GOPATH          = "~/.local/share/go";
+  };
+
+  programs.bash.shellAliases = {
+    blui = "bluetoothctl";
+    c    = "clear";
+    ld   = "sudo lazydocker";
+    ls   = "ls --color=auto -a";
+    gi   = "gitui";
+  };
+
+  programs.bash.shellInit = ''
+    function gsync(){
+      git add .
+      git commit -m update
+      git push
+    }
+    
+    function ya() {
+        tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+        yazi --cwd-file="$tmp"
+        if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+            cd -- "$cwd"
+        fi
+        rm -f -- "$tmp"
+    }
+  '';
+
   programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
