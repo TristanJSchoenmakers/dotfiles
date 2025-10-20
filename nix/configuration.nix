@@ -134,6 +134,7 @@
     # terminal
     alacritty
     lf
+    yazi
     bat
     glow
     git
@@ -158,6 +159,7 @@
     brave
     remmina
     qbittorrent-qt5
+    keepassxc
     mpv-unwrapped
     discord
   ];
