@@ -133,10 +133,6 @@ in
     enableSSHSupport = true;
   };
 
-  programs.firefox = {
-    enable = true;
-  };
-
     # terminal, CLI & TUI's
   environment.systemPackages = with pkgs; [
     # Terminal
@@ -172,7 +168,6 @@ in
     nextdns
     brave
     mpv-unwrapped
-    zathura
   ];
 
   environment.variables = {
