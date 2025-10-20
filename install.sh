@@ -83,7 +83,7 @@ declare -a packages=(
   mpv
   # Programming language build tools
   rustup
-  # IDE & LSP's
+  # IDE & LSPs
   helix
   vscode-langservers-extracted
   marksman
