@@ -12,6 +12,7 @@
     // "custom/media"
   ],
   "modules-center": [
+    "hyprland/submap",
     "hyprland/workspaces"
   ],
   "modules-right": [
@@ -27,9 +28,9 @@
   },
   "hyprland/workspaces": {
     "format": "<sub>{icon}</sub>",
-    "format-icons": {
-      "active": ""
-    },
+    // "format-icons": {
+    //   "active": ""
+    // },
     "format-active": "[{icon}]"
     // "format-window-separator": "\n",
     //    "window-rewrite-default": "",
@@ -40,6 +41,11 @@
     //      "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
     //      "code": "󰨞"
     //    }
+  },
+  "hyprland/submap": {
+    "format": "{}",
+    "max-length": 12,
+    "tooltip": false
   },
   "keyboard-state": {
     "numlock": true,
