@@ -23,7 +23,8 @@ cmd open ${{
         video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
         application/pgp-encrypted) $EDITOR $fx ;;
         image/*) setsid -f sxiv $f ;;
-        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+        * ) $EDITOR $fx;;
+        # *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
     esac
 }}
 
