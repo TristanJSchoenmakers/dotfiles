@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # ./home-manager.nix
     ];
 
   # Bootloader.
@@ -140,9 +141,15 @@
     gh
     # Programming language build tools
     rustup
+    gcc
     dotnet-sdk_8
+    dotnet-aspnetcore_8
+    xorg.libX11
+    xorg.libXi
+    libGL
     # IDE & LSP's
     helix
+    jetbrains.rider
     vscode-langservers-extracted
     nil
     omnisharp-roslyn
@@ -153,6 +160,12 @@
     qbittorrent-qt5
     mpv-unwrapped
     discord
+  ];
+
+  environment.variables.LD_LIBRARY_PATH = builtins.concatStringsSep ":" [
+    "${pkgs.xorg.libX11}/lib"
+    "${pkgs.xorg.libXi}/lib"
+    "${pkgs.libGL}/lib"
   ];
 
   # home-manager = {
