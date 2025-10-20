@@ -7,7 +7,9 @@
 !i3/**
 !lf/**
 !yazi/**
+!nix/
 !nix/**
+!nix/**/*
 !nixz/**
 !starship/**
 !README.md
