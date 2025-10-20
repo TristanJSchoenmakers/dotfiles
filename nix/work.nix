@@ -13,8 +13,8 @@ in
     lens
     # Build tools
     (with dotnetCorePackages; combinePackages [
-      sdk_8_0
-      sdk_9_0
+      sdk_8_0-bin
+      sdk_9_0-bin
     ])
     dotnet-aspnetcore_8
     dotnet-aspnetcore_9
@@ -37,6 +37,7 @@ in
   ];
 
   environment.sessionVariables.ANDROID_HOME = "$HOME/Android/Sdk";
+  environment.sessionVariables.DOTNET_ROOT = "${pkgs.dotnetCorePackages.sdk_9_0-bin}/share/dotnet";
   programs.adb.enable = true;
   # abusers to access adb
   # kvm for hardware acceleration bug: https://nixos.wiki/wiki/Android#hardware_acceleration
