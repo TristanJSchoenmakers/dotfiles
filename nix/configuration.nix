@@ -171,7 +171,6 @@ in
     # applications
     nextdns
     brave
-    keepassxc
     mpv-unwrapped
     zathura
   ];
@@ -228,7 +227,7 @@ in
   services.resolved.enable = false;
   services.nextdns = {
     enable = true;
-    arguments = [  "-config" secrets.nextDnsId "-cache-size" "10MB" ];
+    arguments = [  "-config" secrets.nextDnsId "-cache-size" "10MB" "-report-client-info" "-discovery-dns" secrets.environment ];
   };
       
   # Enable the OpenSSH daemon.
