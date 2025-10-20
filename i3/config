@@ -32,7 +32,8 @@ workspace "9" output DisplayPort-1
 workspace "10" output DisplayPort-1
 
 assign [class="Brave"] 1
-
+assign [class="discord"] 3
+assign [class="slack"] 3
 
 # -----------------
 # exec on start-up

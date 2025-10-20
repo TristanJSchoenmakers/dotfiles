@@ -28,6 +28,7 @@ window {
 	border-color:					#285597;
     border-radius:                  0px;
 	width:							600px;
+	height:							600px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       -60;
