@@ -166,6 +166,7 @@ in
     jetbrains.rider
     vscode-langservers-extracted
     nil
+    marksman
     # applications
     brave
     remmina
