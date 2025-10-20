@@ -33,7 +33,7 @@
 #### 3 - Create simlink from dotfiles to the NixOS configuration directory
 
 ```bash
-sudo ln -s /home/{user}/.config/nixos/configuration.nix /etc/nix/configuration.nix
+sudo ln -s /home/{user}/.config/nix/configuration.nix /etc/nixos/configuration.nix
 ```
 
 
