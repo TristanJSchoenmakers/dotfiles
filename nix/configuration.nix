@@ -199,10 +199,6 @@ in
     waybar
     blueman
     wayvnc
-    #fira-code
-    #nerd-fonts.fira-code
-    #noto-fonts
-    # terminal, CLI & TUI's
     alacritty
     yazi
     ueberzugpp
@@ -229,8 +225,6 @@ in
     markdown-oxide
     # applications
     brave
-    #servo
-    remmina
     keepassxc
     mpv-unwrapped
     zathura
