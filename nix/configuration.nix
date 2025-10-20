@@ -129,12 +129,11 @@ in
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_DATA_HOME   = "$HOME/.local/share";
     XDG_CACHE_HOME  = "$HOME/.cache";
-    STARSHIP_CONFIG = "~/.config/starship/starship.toml";
-    CARGO_HOME      = "~/.local/share/cargo";
-    RUSTUP_HOME     = "~/.local/share/rustup";
-    NUGET_PACKAGES  = "~/.local/share/Nuget";
-    GNUPGHOME       = "~/.local/share/gnupg";
-    GOPATH          = "~/.local/share/go";
+    CARGO_HOME      = "$HOME/.local/share/cargo";
+    RUSTUP_HOME     = "$HOME/.local/share/rustup";
+    NUGET_PACKAGES  = "$HOME/.local/share/Nuget";
+    # GNUPGHOME       = "$HOME/.local/share/gnupg";
+    GOPATH          = "$HOME/.local/share/go";
   };
 
   programs.bash.shellAliases = {
