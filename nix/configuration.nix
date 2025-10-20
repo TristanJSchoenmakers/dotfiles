@@ -128,6 +128,8 @@ in
   virtualisation.docker = {
     enable = true;
     daemon.settings.data-root = "/nix/persist/docker";
+    autoPrune.enable = true;
+    autoPrune.dates = "weekly";
   };
   programs.starship.enable = true;
   programs.gnupg.agent = {
