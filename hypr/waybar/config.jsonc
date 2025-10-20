@@ -16,7 +16,7 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
-    "custom/bluetooth-gui",
+    // "custom/bluetooth-gui",
     "pulseaudio",
     "clock"
     // "tray"
@@ -56,10 +56,10 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
-  "custom/bluetooth-gui": {
-    "format": "",
-    "on-click": "blueman-manager"
-  },
+  // "custom/bluetooth-gui": {
+  //   "format": "",
+  //   "on-click": "blueman-manager"
+  // },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{volume}%",

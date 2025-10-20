@@ -6,6 +6,7 @@
 
 let
   secrets = if builtins.pathExists ./secrets.nix then import ./secrets.nix else {};
+  personal = if builtins.pathExists ./personal.nix then import ./personal.nix else {};
   environmentConfig = if secrets.environment == "work"
                         then import ./work.nix
                       else if secrets.environment == "home"
@@ -18,6 +19,7 @@ in
       /etc/nixos/hardware-configuration.nix
       ./desktop.nix
       environmentConfig
+      personal
     ];
 
   # Bootloader.
@@ -118,6 +120,19 @@ in
     }
   '';
 
+  programs.chromium = {
+    enable = true;
+    extraOpts = {
+      "BraveAIChatEnabled" = false;
+      "BraveNewsDisabled" = true;
+      "BraveRewardsDisabled" = true;
+      "BraveStatsPingEnabled" = false;
+      "BraveWalletDisabled" = true;
+      "BrowserSignin" = false;
+      "PasswordManagerEnabled" = false;
+    };
+  };
+
   networking.firewall.allowedTCPPorts = [ 22 80 443 5900 ];
 
   virtualisation.docker = {
@@ -174,48 +189,6 @@ in
     PKG_CONFIG_PATH="${pkgs.openssl.dev}/lib/pkgconfig";
   };
 
-  environment.etc."hosts".text = lib.mkForce ''
-    127.0.0.1 localhost
-    127.0.0.1       youtube.com
-    127.0.0.1       www.youtube.com
-    127.0.0.1       9gag.com
-    127.0.0.1       www.9gag.com
-    
-    127.0.0.1       x.com
-    127.0.0.1       www.x.com
-    127.0.0.1       twitter.com
-    127.0.0.1       www.twitter.com
-    127.0.0.1       trends24.in
-    127.0.0.1       www.trends24.in
-    
-    127.0.0.1       ad.nl
-    127.0.0.1       www.ad.nl
-    127.0.0.1       nrc.nl
-    127.0.0.1       www.nrc.nl
-    127.0.0.1       nu.nl
-    127.0.0.1       www.nu.nl
-    127.0.0.1       nos.nl
-    127.0.0.1       www.nos.nl
-    127.0.0.1       telegraaf.nl
-    127.0.0.1       www.telegraaf.nl
-    127.0.0.1       trouw.nl
-    127.0.0.1       www.trouw.nl
-    127.0.0.1       volkskrant.nl
-    127.0.0.1       www.volkskrant.nl
-    127.0.0.1       peilingennederland.nl
-    127.0.0.1       www.peilingennederland.nl
-    
-    127.0.0.1       theguardian.com
-    127.0.0.1       www.theguardian.com
-    127.0.0.1       cnn.com
-    127.0.0.1       www.cnn.com
-    127.0.0.1       edition.cnn.com
-    127.0.0.1       www.edition.cnn.com
-    127.0.0.1       foxnews.com
-    127.0.0.1       www.foxnews.com
-    127.0.0.1       msnbc.com
-    127.0.0.1       www.msnbc.com
-  '';
 
   networking.nameservers = [ "127.0.0.1" "::1" ];
   networking.networkmanager.dns = "none";

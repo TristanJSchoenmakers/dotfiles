@@ -14,3 +14,4 @@
 !mimeapps.list
 !home.nix
 nix/secrets.nix
+nix/personal.nix

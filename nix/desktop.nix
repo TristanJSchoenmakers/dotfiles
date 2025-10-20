@@ -80,6 +80,6 @@
     wofi
     waybar
     eww
-    blueman
+    pamixer
   ];
 }
