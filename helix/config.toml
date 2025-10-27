@@ -37,6 +37,7 @@ cursor-line = "warning" # show warnings and errors on the cursorline inline
 "C-l"  = "jump_view_right"
 "C-q"  = "wclose"
 "C-e"  = "transpose_view"
+"C-,"  = "symbol_picker"
 
 [keys.normal.space]
 f      = "no_op"

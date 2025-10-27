@@ -174,12 +174,14 @@ in
     rustup
     cargo-nextest
     gcc
+    lld_21
     mdbook
     openssl
     pkg-config
     # IDE & LSP's
     helix
     vscode-langservers-extracted
+    typescript-language-server
     clang-tools
     nil
     dprint
