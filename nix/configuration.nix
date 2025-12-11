@@ -1,16 +1,14 @@
 # Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+# your system. Help is available in the configuration.nix(5) man page, on
+# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 let
   secrets = if builtins.pathExists ./secrets.nix then import ./secrets.nix else {};
   personal = if builtins.pathExists ./personal.nix then import ./personal.nix else {};
   environmentConfig = if secrets.environment == "work"
                         then import ./work.nix
-                      else if secrets.environment == "home"
-                        then import ./home.nix
                       else {};
 in
 {
@@ -22,7 +20,7 @@ in
       personal
     ];
 
-  # Bootloader.
+  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -62,8 +60,8 @@ in
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
+    # alsa.enable = true;
+    # alsa.support32Bit = true;
     pulse.enable = true;
   };
 
@@ -101,7 +99,7 @@ in
     MACHINE_STORAGE_PATH = "$XDG_DATA_HOME/docker-machine";
   };
 
-  programs.bash.shellAliases = {
+  environment.shellAliases = {
     blui = "bluetoothctl";
     c    = "clear";
     ld   = "sudo lazydocker";
@@ -109,7 +107,7 @@ in
     gi   = "gitui";
   };
 
-  programs.bash.shellInit = ''
+  programs.bash.interactiveShellInit = ''
     function gsync(){
       git add .
       git commit -m update
@@ -154,7 +152,6 @@ in
     enableSSHSupport = true;
   };
 
-    # terminal, CLI & TUI's
   environment.systemPackages = with pkgs; [
     # Terminal
     alacritty
@@ -215,5 +212,5 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }
