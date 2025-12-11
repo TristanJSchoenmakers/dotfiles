@@ -3,12 +3,12 @@
 {
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
     excludePackages = [ pkgs.xterm ];
     xkb.variant = "";
     xkb.layout = "";
   };
+  services.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
 
   fonts.packages = with pkgs; [
     fira-code
@@ -37,7 +37,9 @@
     gnome-tour
     gnome-weather
     loupe
+    papers
     seahorse
+    showtime
     simple-scan
     snapshot
     totem

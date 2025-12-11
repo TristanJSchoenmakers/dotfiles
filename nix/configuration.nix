@@ -97,6 +97,7 @@ in
     DOCKER_CONFIG   = "$XDG_CONFIG_HOME/docker";
     KUBECONFIG      = "$XDG_CONFIG_HOME/kube";
     KUBECACHEDIR    = "$XDG_CACHE_HOME/kube";
+    STARSHIP_CONFIG = "$XDG_CACHE_HOME/starship/starship.toml";
     MACHINE_STORAGE_PATH = "$XDG_DATA_HOME/docker-machine";
   };
 
@@ -187,7 +188,7 @@ in
     dprint
     markdown-oxide
     # applications
-    nextdns
+    # nextdns
     brave
     mpv-unwrapped
   ];
@@ -197,13 +198,13 @@ in
   };
 
 
-  networking.nameservers = [ "127.0.0.1" "::1" ];
-  networking.networkmanager.dns = "none";
-  services.resolved.enable = false;
-  services.nextdns = {
-    enable = true;
-    arguments = [  "-config" secrets.nextDnsId "-cache-size" "10MB" "-report-client-info" "-discovery-dns" secrets.environment ];
-  };
+  # networking.nameservers = [ "127.0.0.1" "::1" ];
+  #networking.networkmanager.dns = "none";
+  #services.resolved.enable = false;
+  #services.nextdns = {
+  #  enable = true;
+  #  arguments = [  "-config" secrets.nextDnsId "-cache-size" "10MB" "-report-client-info" "-discovery-dns" secrets.environment ];
+  #};
       
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
@@ -214,5 +215,5 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 }
