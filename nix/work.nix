@@ -29,7 +29,6 @@ in
     slack
   ];
 
-  networking.hostName = "nixos-work"; # Define your hostname.
   programs.nix-ld.enable = true;
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
