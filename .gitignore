@@ -9,6 +9,7 @@
 !nix/**
 !nix/**/*
 !starship/**
+!vicinae/**
 !README.md
 !install.sh
 !mimeapps.list
