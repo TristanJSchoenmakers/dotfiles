@@ -79,9 +79,8 @@
     hyprshot
       libnotify
       wl-clipboard
-    wofi
+      satty
+    vicinae
     waybar
-    eww
-    pamixer
   ];
 }
