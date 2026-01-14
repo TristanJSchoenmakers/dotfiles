@@ -1,0 +1,13 @@
+[appearance]
+style = "Solid"
+
+[appearance.background_color]
+base = "#202123"
+
+[modules]
+left = [ "MediaPlayer", "Tray" ]
+center = [ "Workspaces" ]
+right = [ "Clock", "Settings" ]
+
+[workspaces]
+visibility_mode = "MonitorSpecific"

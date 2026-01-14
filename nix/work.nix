@@ -14,10 +14,9 @@ in
     # Build tools
     (with dotnetCorePackages; combinePackages [
       sdk_8_0-bin
-      sdk_9_0-bin
+      sdk_10_0-bin
     ])
-    dotnet-aspnetcore_8
-    dotnet-aspnetcore_9
+    dotnet-aspnetcore_10
     azure-functions-core-tools
     nodejs_20
     yarn
@@ -31,13 +30,9 @@ in
 
   programs.nix-ld.enable = true;
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-sdk-7.0.410"
-    "dotnet-sdk-wrapped-7.0.410"
-  ];
 
   environment.sessionVariables.ANDROID_HOME = "$HOME/Android/Sdk";
-  environment.sessionVariables.DOTNET_ROOT = "${pkgs.dotnetCorePackages.sdk_9_0-bin}/share/dotnet";
+  environment.sessionVariables.DOTNET_ROOT = "${pkgs.dotnetCorePackages.sdk_10_0-bin}/share/dotnet";
   programs.adb.enable = true;
   # abusers to access adb
   # kvm for hardware acceleration bug: https://nixos.wiki/wiki/Android#hardware_acceleration

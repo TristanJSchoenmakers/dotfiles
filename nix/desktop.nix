@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   services.xserver = {
@@ -81,6 +81,6 @@
       wl-clipboard
       satty
     vicinae
-    waybar
+    ashell
   ];
 }
