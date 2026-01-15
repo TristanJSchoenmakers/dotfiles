@@ -56,13 +56,11 @@ in
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Enable sound with pipewire.
-  security.rtkit.enable = true;
-  services.pipewire = {
+  services.printing.enable = true;
+  services.pipewire.enable = true;
+  hardware.bluetooth = {
     enable = true;
-    # alsa.enable = true;
-    # alsa.support32Bit = true;
-    pulse.enable = true;
+    settings.General.Experimental = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -95,7 +93,6 @@ in
     DOCKER_CONFIG   = "$XDG_CONFIG_HOME/docker";
     KUBECONFIG      = "$XDG_CONFIG_HOME/kube";
     KUBECACHEDIR    = "$XDG_CACHE_HOME/kube";
-    STARSHIP_CONFIG = "$XDG_CACHE_HOME/starship/starship.toml";
     MACHINE_STORAGE_PATH = "$XDG_DATA_HOME/docker-machine";
   };
 
@@ -145,7 +142,12 @@ in
     autoPrune.enable = true;
     autoPrune.dates = "weekly";
   };
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    settings.package.disabled = true;
+    settings.git_branch.symbol = " ";
+    settings.git_status.stashed = "";
+  };
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-gnome3;

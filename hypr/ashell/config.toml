@@ -6,7 +6,7 @@ base = "#202123"
 
 [modules]
 left = [ "MediaPlayer", "Tray" ]
-center = [ "Workspaces" ]
+center = [ "KeyboardSubmap", "Workspaces" ]
 right = [ "Clock", "Settings" ]
 
 [workspaces]
