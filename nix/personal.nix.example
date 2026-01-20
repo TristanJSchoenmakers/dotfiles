@@ -1,0 +1,17 @@
+{ pkgs, ... }:
+
+{
+  environment.sessionVariables.MYENV = "home";
+
+  programs.git = {
+    config = {
+      commit.gpgsign = true;
+    };
+  };
+
+  environment.systemPackages = with pkgs; [
+    slack
+    nodejs_20
+  ];
+  
+}

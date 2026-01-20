@@ -5,18 +5,13 @@
 { pkgs, ... }:
 
 let
-  secrets = if builtins.pathExists ./secrets.nix then import ./secrets.nix else {};
   personal = if builtins.pathExists ./personal.nix then import ./personal.nix else {};
-  environmentConfig = if secrets.environment == "work"
-                        then import ./work.nix
-                      else {};
 in
 {
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ./desktop.nix
-      environmentConfig
       personal
     ];
 
@@ -72,7 +67,6 @@ in
   };
 
   environment.sessionVariables = {
-    MYENV           = secrets.environment;
     PATH            = [
       "~/.local/share/cargo/bin"
     ];
@@ -148,6 +142,7 @@ in
     settings.git_branch.symbol = " ";
     settings.git_status.stashed = "";
   };
+  programs.git.enable = true;
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-gnome3;
@@ -160,7 +155,6 @@ in
     ueberzugpp
     # CLI's
     ripgrep
-    git
     pinentry-curses
     cloudflared
     wayvnc
@@ -214,5 +208,5 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 }

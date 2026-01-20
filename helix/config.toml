@@ -21,7 +21,7 @@ line-number = "relative"
 cursor-line = "warning" # show warnings and errors on the cursorline inline
 
 [keys.normal]
-"C-r"  = ":reload"
+"C-r"  = ":reload-all"
 "G"    = "goto_file_end"
 "o"    = "file_picker"
 "O"    = "file_picker_in_current_directory"
