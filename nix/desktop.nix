@@ -63,7 +63,9 @@
   programs.dconf.profiles.user.databases = [
     {
       settings."org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
         gtk-theme = "Adwaita";
+        gtk-enable-primary-paste = false; # Disables copy-paste with middle-mouse button
         icon-theme = "Flat-Remix-Red-Dark";
         font-name = "Noto Sans Medium 11";
         # cursor-size = lib.gvariant.mkInt32 64;
