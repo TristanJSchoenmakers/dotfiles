@@ -12,6 +12,7 @@ in
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ./desktop.nix
+      ./modules/trash.nix
       personal
     ];
 
@@ -158,6 +159,8 @@ in
     pinentry-curses
     cloudflared
     wayvnc
+    imagemagick
+    ffmpeg_7-headless
     # TUI's
     yazi
     gitui

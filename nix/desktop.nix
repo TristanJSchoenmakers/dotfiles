@@ -82,6 +82,8 @@
       libnotify
       wl-clipboard
       satty
+    wf-recorder
+      slurp
     vicinae
     ashell
   ];
