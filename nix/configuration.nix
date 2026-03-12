@@ -166,15 +166,6 @@ in
     gitui
     gh
     lazydocker
-    drill
-    # Build tools
-    rustup
-    cargo-nextest
-    gcc
-    lld_21
-    mdbook
-    openssl
-    pkg-config
     # IDE & LSP's
     helix
     vscode-langservers-extracted
@@ -185,14 +176,10 @@ in
     markdown-oxide
     # applications
     # nextdns
+    file-roller
     brave
     mpv-unwrapped
   ];
-
-  environment.variables = {
-    PKG_CONFIG_PATH="${pkgs.openssl.dev}/lib/pkgconfig";
-  };
-
 
   # networking.nameservers = [ "127.0.0.1" "::1" ];
   #networking.networkmanager.dns = "none";
