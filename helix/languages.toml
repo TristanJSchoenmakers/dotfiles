@@ -9,3 +9,11 @@ config = { markdown.preview.auto = true, markdown.preview.browser = "brave", mar
 # [[language]]
 # name = "markdown"
 # language-servers = [ "mdpls-lsp" ]
+
+[language-server.tinymist]
+command = "tinymist"
+config = { preview.background.enabled = true, preview.background.args = [
+  "--data-plane-host=127.0.0.1:23635",
+  "--invert-colors=never",
+  "--open"
+] }
