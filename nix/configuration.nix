@@ -174,8 +174,9 @@ in
     nil
     dprint
     markdown-oxide
+    tinymist
     # applications
-    # nextdns
+    typst
     file-roller
     brave
     mpv-unwrapped
