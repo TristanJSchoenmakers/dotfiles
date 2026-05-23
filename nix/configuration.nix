@@ -175,6 +175,7 @@ in
     dprint
     markdown-oxide
     tinymist
+    typstyle
     # applications
     typst
     file-roller

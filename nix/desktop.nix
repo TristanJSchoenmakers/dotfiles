@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,  ... }:
 
 {
   services.xserver = {
@@ -50,7 +50,7 @@
   programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
-    xwayland.enable = true;
+    withUWSM = true;
   };
 
   # Cursor / theme fix: https://wiki.hypr.land/Nix/Hyprland-on-NixOS/#fixing-problems-with-themes & https://wiki.hypr.land/Hypr-Ecosystem/hyprcursor/
@@ -64,7 +64,7 @@
     {
       settings."org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-        gtk-theme = "Adwaita";
+        gtk-theme = "Adwaita-dark";
         gtk-enable-primary-paste = false; # Disables copy-paste with middle-mouse button
         icon-theme = "Flat-Remix-Red-Dark";
         font-name = "Noto Sans Medium 11";
