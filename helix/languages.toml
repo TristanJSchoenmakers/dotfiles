@@ -1,15 +1,3 @@
-#[[language]]
-#name = "markdown"
-#formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
-
-[language-server.mdpls-lsp]
-command = "mdpls"
-config = { markdown.preview.auto = true, markdown.preview.browser = "brave", markdown.preview.codeTheme = "atom-one-dark" }
-
-# [[language]]
-# name = "markdown"
-# language-servers = [ "mdpls-lsp" ]
-
 [language-server.tinymist]
 command = "tinymist"
 config = { preview.background.enabled = true, preview.background.args = [
@@ -17,3 +5,10 @@ config = { preview.background.enabled = true, preview.background.args = [
   "--invert-colors=never",
   "--open"
 ] }
+
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+formatter = { command = "typstyle" }
+auto-format = true
