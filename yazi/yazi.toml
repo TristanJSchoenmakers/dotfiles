@@ -15,7 +15,6 @@ cache_dir  = ""
 
 [opener]
 folder = [
-	{ run = 'echo placeholder' },
 	{ run = 'nautilus "$@" -w', orphan = true },
 ]
 archive = [
@@ -47,7 +46,6 @@ browser = [
 
 [open]
 rules = [
-	{ name = "*/", use = "folder" },
 
 	{ mime = "text/*", use = "text" },
 	{ mime = "image/*", use = "image" },
@@ -67,6 +65,7 @@ rules = [
 	{ mime = "application/x-rar", use = "archive" },
 	{ mime = "application/pdf", use = "browser" },
 
+	{ mime = "*/", use = "folder" },
 	{ mime = "*", use = "fallback" },
 ]
 
