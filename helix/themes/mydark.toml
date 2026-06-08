@@ -55,7 +55,8 @@
 "punctuation" = { fg = "greywhite" }
 "punctuation.delimiter" = { fg = "greywhite" }
 
-"variable" = { fg = "white" }
+# "variable" = { fg = "white" }
+"variable" = { fg = "light-blue" }
 "constant" = { fg = "greywhite" }
 
 "function" = { fg = "function" }

@@ -38,7 +38,6 @@
     gnome-weather
     loupe
     papers
-    seahorse
     showtime
     simple-scan
     snapshot
