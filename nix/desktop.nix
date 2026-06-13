@@ -47,6 +47,7 @@
 
   # Hyprland
   programs.hyprlock.enable = true;
+  services.hypridle.enable = true;
   programs.hyprland = {
     enable = true;
     withUWSM = true;

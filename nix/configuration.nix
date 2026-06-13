@@ -20,12 +20,6 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  powerManagement.enable = false;
-  systemd.targets.sleep.enable = false;
-  systemd.targets.suspend.enable = false;
-  systemd.targets.hibernate.enable = false;
-  systemd.targets.hybrid-sleep.enable = false;
-
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true; # Enable networking
 
@@ -140,6 +134,7 @@ in
   programs.starship = {
     enable = true;
     settings.package.disabled = true;
+    settings.battery.disabled = true;
     settings.git_branch.symbol = " ";
     settings.git_status.stashed = "";
   };
