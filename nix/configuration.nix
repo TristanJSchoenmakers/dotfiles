@@ -73,7 +73,10 @@ in
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_DATA_HOME   = "$HOME/.local/share";
     XDG_CACHE_HOME  = "$HOME/.cache";
+    _JAVA_OPTIONS   = "-Djava.util.prefs.userRoot=.config/java";
     CARGO_HOME      = "$HOME/.local/share/cargo";
+    CLAUDE_CONFIG_DIR = "$XDG_CONFIG_HOME/claude";
+    CUDA_CACHE_PATH = "$XDG_CACHE_HOME/nv";
     RUSTUP_HOME     = "$HOME/.local/share/rustup";
     NUGET_PACKAGES  = "$HOME/.local/share/Nuget";
     GNUPGHOME       = "$HOME/.local/share/gnupg";
@@ -151,6 +154,7 @@ in
     ueberzugpp
     # CLI's
     ripgrep
+    jq
     pinentry-curses
     cloudflared
     wayvnc
@@ -168,7 +172,6 @@ in
     clang-tools
     nil
     dprint
-    markdown-oxide
     tinymist
     typstyle
     # applications
