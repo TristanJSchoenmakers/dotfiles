@@ -11,7 +11,8 @@ in
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
-      ./desktop.nix
+      ./modules/gnome.nix
+      ./modules/hyprland.nix
       ./modules/trash.nix
       personal
     ];
@@ -147,6 +148,14 @@ in
     pinentryPackage = pkgs.pinentry-gnome3;
     enableSSHSupport = true;
   };
+
+  services.xserver = {
+    enable = true;
+    excludePackages = [ pkgs.xterm ];
+    xkb.variant = "";
+    xkb.layout = "";
+  };
+  services.displayManager.gdm.enable = true;
 
   environment.systemPackages = with pkgs; [
     # Terminal

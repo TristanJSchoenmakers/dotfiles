@@ -1,22 +1,8 @@
-{ pkgs,  ... }:
+{ pkgs, ... }:
 
 {
-  services.xserver = {
-    enable = true;
-    excludePackages = [ pkgs.xterm ];
-    xkb.variant = "";
-    xkb.layout = "";
-  };
   services.desktopManager.gnome.enable = true;
-  services.displayManager.gdm.enable = true;
 
-  fonts.packages = with pkgs; [
-    fira-code
-    nerd-fonts.fira-code
-    noto-fonts
-  ];
-
-  # Gnome
   environment.gnome.excludePackages = (with pkgs; [
     epiphany
     evince
@@ -45,21 +31,6 @@
     geary
   ]);
 
-  # Hyprland
-  programs.hyprlock.enable = true;
-  services.hypridle.enable = true;
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-  };
-
-  # Cursor / theme fix: https://wiki.hypr.land/Nix/Hyprland-on-NixOS/#fixing-problems-with-themes & https://wiki.hypr.land/Hypr-Ecosystem/hyprcursor/
-  environment.sessionVariables = {
-    XCURSOR_THEME   = "Adwaita";
-    XCURSOR_SIZE    = 24;
-    HYPRCURSOR_SIZE = 24;
-  };
-
   programs.dconf.profiles.user.databases = [
     {
       settings."org/gnome/desktop/interface" = {
@@ -74,17 +45,5 @@
       };
     }
   ];
-
-  environment.systemPackages = with pkgs; [
-    # display
-    hyprpaper
-    hyprshot
-      libnotify
-      wl-clipboard
-      satty
-    wf-recorder
-      slurp
-    vicinae
-    ashell
-  ];
 }
+
