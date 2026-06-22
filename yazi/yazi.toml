@@ -16,37 +16,47 @@ cache_dir  = ""
 [opener]
 folder = [
 	{ run = 'nautilus "$@" -w', orphan = true },
+	{ desc = 'copy name', run = 'basename "$1" | wl-copy --trim-newline' },
 ]
 archive = [
-	{ run = 'file-roller "$1"' },
+	{ run = 'file-roller "$1"', orphan = true },
+	{ run = 'nautilus "$@" -w', orphan = true },
+	{ desc = 'copy name', run = 'basename "$1" | wl-copy --trim-newline' },
 ]
 text = [
-	{ run = '$EDITOR "$@"', block = true },
-	{ run = 'alacritty -e bash -c "$EDITOR $@"' },
+	{ desc = 'helix', run = 'hx "$@"', block = true },
+	{ desc = 'helix new terminal', run = 'alacritty -e bash -c "$EDITOR $@"' },
+	{ desc = 'copy name', run = 'basename "$1" | wl-copy --trim-newline' },
 ]
 image = [
-	{ run = 'brave "$@"', display_name = "Open in browser" },
-	{ run = 'open "$@"', display_name = "Open" },
+	{ run = 'brave "$@"', desc = "Open in browser" },
+	{ run = 'open "$@"', desc = "Open" },
+	{ desc = 'copy name', run = 'basename "$1" | wl-copy --trim-newline' },
 ]
 video = [
 	{ run = 'mpv "$@"' },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
+	{ desc = 'copy name', run = 'basename "$1" | wl-copy --trim-newline' },
 ]
 audio = [
 	{ run = 'mpv "$@"', block = true, display_name = "open in mpv" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
+	{ desc = 'copy name', run = 'basename "$1" | wl-copy --trim-newline' },
 ]
 fallback = [
+	{ desc = 'helix', run = 'hx "$@"', block = true },
 	{ run = 'open "$@"', display_name = "Open" },
 	{ run = 'open -R "$@"', display_name = "Reveal in Finder" },
+	{ desc = 'copy name', run = 'basename "$1" | wl-copy --trim-newline' },
 ]
 browser = [
 	{ run = 'brave "$@"' },
+	{ desc = 'copy name', run = 'basename "$1" | wl-copy --trim-newline' },
+	{ desc = 'helix', run = 'hx "$@"', block = true },
 ]
 
 [open]
 rules = [
-
 	{ mime = "text/*", use = "text" },
 	{ mime = "image/*", use = "image" },
 	{ mime = "video/*", use = "video" },

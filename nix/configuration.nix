@@ -186,6 +186,7 @@ in
     # applications
     typst
     file-roller
+    mission-center
     brave
     mpv-unwrapped
   ];
