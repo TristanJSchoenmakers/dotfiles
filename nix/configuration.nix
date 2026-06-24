@@ -166,7 +166,6 @@ in
     jq
     pinentry-curses
     cloudflared
-    wayvnc
     imagemagick
     ffmpeg_7-headless
     # TUI's
