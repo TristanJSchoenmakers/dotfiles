@@ -8,7 +8,6 @@ bufferline = "multiple"
 color-modes = true
 completion-trigger-len = 1      # min-lenght to start auto-completion
 end-of-line-diagnostics = "hint"
-line-number = "relative"
 
 [editor.auto-pairs]
 '(' = ')'
@@ -23,7 +22,6 @@ cursor-line = "warning" # show warnings and errors on the cursorline inline
 [keys.normal]
 "C-r"  = ":reload-all"
 "C-p" = ':lsp-workspace-command tinymist.pinMain "%sh{realpath %{buffer_name}}"'
-"G"    = "goto_file_end"
 "o"    = "file_picker"
 "O"    = "file_picker_in_current_directory"
 # Tab/Buffer
@@ -50,4 +48,3 @@ b      = "no_op"
 "j"    = "extend_line_down"
 "k"    = "extend_line_up"
 "l"    = "extend_char_right"
-"G"    = "goto_file_end"
