@@ -4,8 +4,8 @@
 
 { pkgs, config, ... }:
 
-let
-  personal = if builtins.pathExists ./personal.nix then import ./personal.nix else {};
+let # Optional personal.nix for nix configuration specific for a certain machine
+  personal = if builtins.pathExists /etc/nixos/personal.nix then import /etc/nixos/personal.nix else {};
 in
 {
   imports =
@@ -46,6 +46,8 @@ in
     options = "--delete-older-than 3d";
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
+
 
   services.printing.enable = true;
   services.pipewire.enable = true;
