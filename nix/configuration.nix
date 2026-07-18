@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   personal = if builtins.pathExists ./personal.nix then import ./personal.nix else {};
@@ -62,6 +62,10 @@ in
     packages = [];
   };
 
+  systemd.user.tmpfiles.users.johndoe.rules = [
+    "L+ %h/.local/share/applications - - - - %h/.config/applications"
+  ];
+
   environment.sessionVariables = {
     PATH            = [
       "~/.local/share/cargo/bin"
@@ -76,7 +80,6 @@ in
     XDG_CACHE_HOME  = "$HOME/.cache";
     _JAVA_OPTIONS   = "-Djava.util.prefs.userRoot=.config/java";
     CARGO_HOME      = "$HOME/.local/share/cargo";
-    CLAUDE_CONFIG_DIR = "$XDG_CONFIG_HOME/claude";
     CUDA_CACHE_PATH = "$XDG_CACHE_HOME/nv";
     RUSTUP_HOME     = "$HOME/.local/share/rustup";
     NUGET_PACKAGES  = "$HOME/.local/share/Nuget";
