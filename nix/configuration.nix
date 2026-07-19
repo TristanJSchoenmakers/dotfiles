@@ -46,8 +46,6 @@ in
     options = "--delete-older-than 3d";
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nixpkgs.config.allowUnfree = true;
-
 
   services.printing.enable = true;
   services.pipewire.enable = true;
