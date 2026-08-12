@@ -168,7 +168,6 @@ in
     ripgrep
     jq
     pinentry-curses
-    cloudflared
     imagemagick
     ffmpeg_7-headless
     # TUI's
