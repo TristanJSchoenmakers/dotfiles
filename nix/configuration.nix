@@ -40,10 +40,12 @@ in
   };
 
   documentation.nixos.enable = false;
-  nix.gc = {
-    automatic = true;
-    dates = "daily";
-    options = "--delete-older-than 3d";
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/johndoe/.config/nix";
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -100,7 +102,14 @@ in
     gi   = "gitui";
   };
 
+  programs.flyline.enable = true;
   programs.bash.interactiveShellInit = ''
+    if [[ "$(type -t flyline)" == builtin ]]; then
+      flyline editor --show-inline-history false
+      # flyline mouse --mode disabled
+      # flyline --set-frame-rate 24
+    fi
+
     function gsync(){
       git add .
       git commit -m update
