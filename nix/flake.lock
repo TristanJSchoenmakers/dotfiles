@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786485768,
-        "narHash": "sha256-+WJcYeZTRkTo4zU/zlf/hkttd0aqwn6vZyCG+TzZtEY=",
+        "lastModified": 1786919157,
+        "narHash": "sha256-+psf0oMHewZ/ajMAYFmdlNDH8zOU8KhKX9KTeS1OTi8=",
         "owner": "HalFrgrd",
         "repo": "flyline",
-        "rev": "72339089939375381cc5e4aa0f57cc82b5b38907",
+        "rev": "3e554bb43cae38ac0825275ab1163c32d5ab1847",
         "type": "github"
       },
       "original": {
@@ -22,11 +22,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1784432872,
-        "narHash": "sha256-n3gKTBIV4ZA5VQpUakffBe3KGu4+mhPoA34rrqS0GkA=",
+        "lastModified": 1786943417,
+        "narHash": "sha256-b4qgjdFtlz5TAZ1Hi7DFJeqX3sjaDUnrwr9OO+O1rM0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "fd1462031fdee08f65fd0b4c6b64e22239a77870",
+        "rev": "0dd31db7e6dbf9ce05697c4545f6fe01accec994",
         "type": "github"
       },
       "original": {
